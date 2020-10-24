@@ -1,0 +1,22 @@
+.footer {
+  background-color: $color-dark;
+  width: 100vw;
+  height: 20vh;
+  color: $color-bright;
+  grid-area: footer;
+  margin-top: 5vw;
+  padding: $main-padding;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  &__content {
+    max-width: 1024px;
+    width: 100%;
+  }
+
+  &__paragraph {
+    width: 100%;
+  }
+}

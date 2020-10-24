@@ -1,0 +1,17 @@
+.menu {
+  // border: grey 1px solid;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  grid-area: menu;
+
+  align-content: center;
+  align-items: center;
+
+  @media (orientation: landscape) {
+    width: 100%;
+
+    // border: rgb(40, 111, 40) 2px dotted;
+  }
+}

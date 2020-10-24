@@ -1,0 +1,45 @@
+.house {
+  position: relative;
+  // border: gray 1px solid;
+  // flex-basis: 100%;
+  height: 80vw;
+  width: 100%;
+
+  max-width: 1024px;
+  // max-height: 800px;
+  margin: $main-padding auto 0;
+  grid-area: house;
+
+  @media (orientation: landscape) {
+    // height: 100%;
+    width: 600px;
+    height: 600px;
+    // border: rgb(85, 16, 16) 2px dotted;
+    // border: gray 1px solid;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    // border: blue 2px dotted;
+  }
+
+  &__box {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    // max-width: 1024px;
+    // max-height: 800px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    // border: green 2px dotted;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "contractors": [
+    {
+      "id": 1,
+      "name": "Budex",
+      "image": "zdjecie",
+      "profession": "plumber"
+    },
+    {
+      "id": 2,
+      "name": "Hadex Szeroka",
+      "image": " zdjecie 2",
+      "profession": "carpenter"
+    }
+  ]
+}

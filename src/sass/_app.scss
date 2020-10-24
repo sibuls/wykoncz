@@ -1,0 +1,34 @@
+.app {
+  overflow: hidden;
+
+  // border: 4px dotted green;
+  min-height: 100vh;
+  width: 100vw;
+  // border: royalblue 2px dotted;
+
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 1%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba($color-background-dark, 1) 50.1%,
+      rgba($color-background-dark, 1) 85.1%,
+      rgba($color-background-dark, 1) 100%
+    ),
+    $color-background;
+
+  display: grid;
+  grid-template:
+    'header'
+    'wrapper'
+    'footer';
+
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto;
+
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  justify-content: center;
+  justify-items: center;
+}

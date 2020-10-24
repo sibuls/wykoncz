@@ -1,0 +1,51 @@
+.wrapper {
+  // overflow: hidden;
+
+  display: grid;
+  position: relative;
+  // border: 2px dotted red;
+  height: 100%;
+  max-width: 1280px;
+
+  width: 100vw;
+  // max-height: 800px;
+  grid-area: wrapper;
+  grid-template:
+    'house'
+    'menu';
+
+  grid-template-rows: auto auto auto 100px;
+  grid-template-columns: auto;
+  align-content: flex-start;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+
+  @media (orientation: landscape) {
+    grid-template: 'menu house';
+
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+
+    // max-width: 100%;
+
+    // width: 100vw;
+
+    align-content: flex-start;
+    // justify-content: center;
+    // justify-items: center;
+    // margin: 0 auto;
+  }
+}
+
+// .aa {
+//   grid-area: aa;
+//   background: orange;
+//   width: 100px;
+// }
+
+// .bb {
+//   grid-area: bb;
+//   background: green;
+//   // width: 1700px;
+// }

@@ -1,0 +1,41 @@
+// $color-bright: rgb(152, 152, 152);
+$color-bright: #dbcbbd;
+$color-light: #c87941;
+$color-regular: #87431d;
+$color-dark: #290001;
+$color-house-line: #6d2223;
+$color-font: lighten(#290001, 5%);
+
+$color-background: #dccdb8;
+$color-background-dark: rgb(185, 170, 147);
+// $color-background: #93846c;
+
+// $xs-font-size: 12px;
+$xs-font-size: 12px;
+$sm-font-size: 16px;
+$md-font-size: 18px;
+$lg-font-size: 20px;
+
+$font-imb: 'IBM Plex Sans', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-commisioner: 'Commissioner', sans-serif;
+$font-hand: 'Nothing You Could Do', cursive;
+
+$main-padding: 20px;
+$main-margin-responsive: 20px;
+$main-spacing: 20px;
+$max-width: 1000px;
+
+$breakpoints: (
+  xs: 500px,
+  sm: 800px,
+  md: 1024px,
+  lg: 2000px,
+);
+
+:export {
+  colorBright: $color-bright;
+  colorLight: $color-light;
+  colorRegular: $color-regular;
+  colorDark: $color-dark;
+}

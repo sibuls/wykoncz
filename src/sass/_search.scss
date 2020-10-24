@@ -1,0 +1,43 @@
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  justify-items: flex-end;
+
+  &__box {
+    width: 30%;
+    transition: width 0.4s ease-in-out;
+    color: $color-bright;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: $color-background;
+    border: 3px double $color-background-dark;
+  }
+
+  &__input {
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 1rem;
+    width: 100%;
+    background: $color-background;
+    border: 0;
+    padding: 1rem $main-padding / 2;
+  }
+
+  &__button {
+    color: $color-regular;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: $color-bright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__box:hover {
+    width: 60%;
+    max-width: 800px;
+  }
+}
