@@ -1,13 +1,13 @@
 const contractors = [
   {
     id: 1,
-    name: 'Budex',
+    name: 'Hydrex hydraulika',
     image: 'zdjecie',
     profession: 'plumber',
   },
   {
     id: 2,
-    name: 'Hadex Szeroka',
+    name: 'Bartek',
     image: ' zdjecie 2',
     profession: 'carpenter',
   },
@@ -19,7 +19,7 @@ const contractors = [
   },
   {
     id: 4,
-    name: 'Hydraulik Mario',
+    name: 'Budowniczy Mario',
     image: ' zdjecie 2',
     profession: 'tiler',
   },
@@ -34,6 +34,12 @@ const contractors = [
     name: 'Hydrus',
     image: 'zdjecie',
     profession: 'plumber',
+  },
+  {
+    id: 7,
+    name: 'Aris',
+    image: 'zdjecie',
+    profession: 'carpenter',
   },
 ];
 

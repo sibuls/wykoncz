@@ -9,9 +9,10 @@ const Menu = (props) => {
   return (
     <div className='menu'>
       <MenuContractors
+        contractors={props.contractors}
         professions={props.professions}
         profession={props.profession}
-        pprofession={props.pprofession}
+        // pprofession={props.pprofession}
         descriptionPl={props.descriptionPl}
       />
       <MenuImage profession={props.profession} />

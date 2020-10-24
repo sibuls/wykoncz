@@ -1,6 +1,7 @@
 html {
   font-size: $xs-font-size;
   $main-margin-responsive: 20px;
+  color: $color-font;
 
   font-family: $font-montserrat;
   @media screen and (min-width: map-get($breakpoints, xs)) {

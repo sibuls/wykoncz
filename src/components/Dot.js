@@ -14,8 +14,8 @@ const Dot = (props) => {
         key={`${props.id}dot`}
         id={`${props.id}dot`}
         className={props.style}
-        onMouseOver={() => props.changeTint(props.descriptionPl)}
-        onMouseOut={() => props.changeTint('')}
+        // onMouseOver={() => props.changeTint(props.descriptionPl)}
+        // onMouseOut={() => props.changeTint('')}
         onClick={() =>
           props.changeProfession(props.profession, props.descriptionPl)
         }

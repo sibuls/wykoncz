@@ -16,8 +16,8 @@ const House = (props) => {
         profession={element.en}
         changeProfession={props.changeProfession}
         descriptionPl={element.pl}
-        changeTint={props.changeTint}
-        dotTint={props.dotTint}
+        // changeTint={props.changeTint}
+        // dotTint={props.dotTint}
       />
     );
   });

@@ -15,7 +15,7 @@ class App extends Component {
     professions: [],
     profession: '',
     descriptionPl: '',
-    dotTint: '',
+    // dotTint: '',
     pprofession: '',
     contractors: [],
   };
@@ -30,43 +30,36 @@ class App extends Component {
       descriptionPl,
       isMenuActive: true,
     }));
+
+    // this.createContractors(en);
+
+    // console.log('create cotnractor uruchomiona');
   };
 
-  contractorsChoice = (contractor) => {
-    const showContractor = contractor.map((e) => {});
-  };
+  // createContractors = (en) => {
+  //   // asign function which will make each <Contractor /> as we need
 
-  createContractors = () => {
-    // asign function which will make each <Contractor /> as we need
+  //   const contractorsData = [...contractors];
+  //   // console.log(contractorsData);
+  //   // console.log(this.state.pprofession);
 
-    const contractorsData = [...contractors];
+  //   // filter our database by contractor.profession
+  //   const filteredContractors = contractorsData.filter(
+  //     (contractor) => contractor.profession === en
+  //   );
+  //   // console.log(en);
 
-    // filter our database by contractor.profession
-    const filteredContractors = contractorsData.filter(
-      (contractor) => contractor.profession === this.props.profession
-    );
+  //   console.log(filteredContractors);
 
-    this.contractorsChoice(filteredContractors);
-  };
+  //   // this.contractorsChoice(filteredContractors);
+  // };
 
-  changeTint = (pl) => {
-    const dotTint = pl;
-    this.setState({
-      dotTint,
-    });
-  };
-
-  // componentDidMount() {
-  //   // setTimeout(this.fetchData, 3000)
-  //   fetch('data/professions.json')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.setState({
-  //         professions: data.professions,
-  //         isLoaded: true,
-  //       });
-  //     });
-  // }
+  // changeTint = (pl) => {
+  //   const dotTint = pl;
+  //   this.setState({
+  //     dotTint,
+  //   });
+  // };
 
   componentDidMount() {
     this.setState({
@@ -81,18 +74,6 @@ class App extends Component {
   };
 
   render() {
-    // console.log(typeof professions);
-    // console.log('---');
-    // console.log(contractors);
-    // console.log('---');d
-
-    // console.log('---');
-
-    // console.log('profession: ' + this.state.profession);
-    // console.log('last profession: ' + this.state.prevProfession);
-
-    // console.log('---');
-
     return (
       <div className='app'>
         <Header />
@@ -104,22 +85,23 @@ class App extends Component {
             changeProfession={this.changeProfession}
             profession={this.state.profession}
             professions={this.state.professions}
-            changeTint={this.changeTint}
-            dotTint={this.state.dotTint}
+            // changeTint={this.changeTint}
+            // dotTint={this.state.dotTint}
           />
           {/* <Hamburger
             active={this.state.burgerActive}
             burgerChange={this.burgerChange}
           /> */}
 
-          {this.state.profession === '3' ? (
+          {this.state.profession === '' ? (
             <MenuStart />
           ) : (
             <Menu
               professions={this.state.professions}
               profession={this.state.profession}
-              pprofession={this.state.pprofession}
+              // pprofession={this.state.pprofession}
               descriptionPl={this.state.descriptionPl}
+              contractors={this.state.contractors}
             />
           )}
         </div>
