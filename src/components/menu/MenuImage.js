@@ -1,7 +1,7 @@
 import React from 'react';
-import plumber from '../images/plumber.png';
-import carpenter from '../images/carpenter.png';
-import plasterer from '../images/plasterer.png';
+import plumber from '../../images/plumber.png';
+import carpenter from '../../images/carpenter.png';
+import plasterer from '../../images/plasterer.png';
 
 const MenuImage = (props) => {
   // console.log(props.profession);

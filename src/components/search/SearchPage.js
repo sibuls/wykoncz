@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 
-const MenuStart = () => {
+const SearchPage = () => {
   return (
     <div className='menu-start'>
       <h2 className='menu-start__title'>
@@ -14,4 +14,4 @@ const MenuStart = () => {
   );
 };
 
-export default MenuStart;
+export default SearchPage;

@@ -1,7 +1,7 @@
 // import Contractor from './Contractor';
 import React, { Component } from 'react';
-import Contractor from './Contractor';
-import contractors from '../data/contractors.js';
+import MenuContractor from './MenuContractor';
+import contractors from '../../data/contractors.js';
 
 const MenuContractors = (props) => {
   const profession = props.profession;
@@ -18,7 +18,9 @@ const MenuContractors = (props) => {
 
   const showContractor = filteredContractors.map((e) => {
     // console.log(e);
-    return <Contractor key={e.id} id={e.id} name={e.name} image={e.image} />;
+    return (
+      <MenuContractor key={e.id} id={e.id} name={e.name} image={e.image} />
+    );
   });
 
   // console.log(props);

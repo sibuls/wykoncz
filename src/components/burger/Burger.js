@@ -17,23 +17,23 @@ const Burger = (props) => {
 
           <ul className='burger__menu'>
             <a href='#' className='burger__link'>
-              <li className='burger__li'>Home</li>
+              <li className='burger__li'>Login</li>
             </a>
             <a href='#' className='burger__link'>
-              <li className='burger__li'>About</li>
+              <li className='burger__li'>Rejestracja</li>
             </a>
+
             <a href='#' className='burger__link'>
-              <li className='burger__li'>Info</li>
-            </a>
-            <a href='#' className='burger__link'>
-              <li className='burger__li'>Contaie</li>
+              <li className='burger__li'>
+                Szukaj <i className='fas fa-search burger__search-ico '></i>
+              </li>
             </a>
             <a
               href='https://erikterwan.com/'
               target='_blank'
               className='burger__link'
             >
-              <li className='burger__li'>Show </li>
+              <li className='burger__li'>Działy </li>
             </a>
           </ul>
         </div>

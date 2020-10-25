@@ -1,6 +1,6 @@
 import React from 'react';
-import '../sass/style.scss';
-import photo from '../images/house.png';
+
+import photo from '../../images/house.png';
 import Dot from './Dot';
 
 const House = (props) => {

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Footer from './components/Footer';
-import Hamburger from './components/Hamburger';
-import Menu from './components/Menu';
-import MenuStart from './components/MenuStart';
+import Footer from './components/footer/Footer';
+import Menu from './components/menu/Menu';
+import SearchPage from './components/search/SearchPage';
 import contractors from './data/contractors.js';
 import professions from './data/professions.js';
-import Burger from './components/Burger';
-import House from './components/House';
-import Header from './components/Header';
+import Burger from './components/burger/Burger';
+import House from './components/house/House';
+import Header from './components/header/Header';
+import ContractorsList from './components/contractors/ContractorsList';
+import './sass/style.scss';
 
 class App extends Component {
   state = {
@@ -94,7 +95,7 @@ class App extends Component {
           /> */}
 
           {this.state.profession === '' ? (
-            <MenuStart />
+            <SearchPage />
           ) : (
             <Menu
               professions={this.state.professions}
@@ -104,6 +105,7 @@ class App extends Component {
               contractors={this.state.contractors}
             />
           )}
+          <ContractorsList />
         </div>
         <Burger
           isBurgerActive={this.state.isBurgerActive}

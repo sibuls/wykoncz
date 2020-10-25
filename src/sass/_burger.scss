@@ -17,10 +17,6 @@
     right: 2vw;
     top: 2vh;
 
-    // @media (max-resolution: 1dppx), (min-width: 1024px) {
-    //   position: fixed;
-    // }
-
     -webkit-user-select: none;
     user-select: none;
   }
@@ -32,49 +28,39 @@
 
     padding: $main-padding;
 
-    // opacity: 0.9;
     left: calc(100% + 50px);
     top: -2vh;
     transform: translate(0%, 0);
 
     background-color: $color-background;
-    // background-color: red;
+
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
     transform: translate(-200%, 0) rotate(45deg) scale(0.01);
-    // transform: rotate(45deg);
 
     transition: transform 0.5s linear;
 
     border: $color-background-dark 3px double;
 
-    // border-left: 3px double $color-background-dark;
-    // border-bottom: 3px double $color-background-dark;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 88%);
     opacity: 1;
 
     @media (max-resolution: 1dppx), (min-width: 1281px) {
-      //   opacity: 0;
       transform: translate(-100%, 0) rotate(5deg) scale(1);
 
       opacity: 1;
 
-      // right: 100%;
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     }
   }
 
   &__input:checked ~ ul {
-    // transform: none;
-
     transform: translate(-100%, 0) rotate(5deg) scale(1);
 
     opacity: 1;
 
-    // right: 100%;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
@@ -107,9 +93,6 @@
     -webkit-touch-callout: none;
   }
 
-  /*
-       * Just a quick hamburger
-       */
   &__menu-toggle span {
     display: block;
     width: 33px;
@@ -142,19 +125,12 @@
     transform-origin: 20% 10%;
   }
 
-  /* 
-       * Transform all the slices of hamburger
-       * into a crossmark.
-       */
   &__input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: $color-dark;
   }
 
-  /*
-       * But let's hide the middle one.
-       */
   &__input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
@@ -167,12 +143,7 @@
     transform: rotate(-45deg) translate(0, -1px);
   }
 
-  /*
-       * Make this absolute positioned
-       * at the top left of the screen
-       */
-
-  /*
-       * And let's slide it in from the left
-       */
+  &__search-ico {
+    padding-left: 1rem;
+  }
 }

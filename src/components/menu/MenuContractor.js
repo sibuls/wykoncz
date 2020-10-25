@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contractor = (props) => {
+const MenuContractor = (props) => {
   // console.log(props.contractors);
 
   console.log(props);
@@ -14,4 +14,4 @@ const Contractor = (props) => {
   );
 };
 
-export default Contractor;
+export default MenuContractor;
