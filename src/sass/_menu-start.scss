@@ -2,15 +2,14 @@
   // border: 1px dotted red;
   padding: $main-padding 0;
   width: 100vw;
-  align-self: flex-start;
+  // align-self: flex-start;
 
   letter-spacing: 0.1rem;
   color: $color-dark;
-  // background-color: rgba(39, 103, 64, 0.475);
+  background-color: rgba(39, 103, 64, 0.475);
   @media (orientation: landscape) {
     width: 100%;
-    // height: 100vh;
-    // border: rgb(195, 211, 87) 2px solid;
+
     align-self: center;
   }
 

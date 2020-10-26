@@ -10,9 +10,9 @@ const Search = () => {
           name=''
           placeholder='Wyszukaj ...'
         />
-        {/* <button className='search__button'>
+        <button className='search__button'>
           <i class='fas fa-search search__ico'></i>
-        </button> */}
+        </button>
       </div>
     </form>
   );

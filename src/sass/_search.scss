@@ -1,11 +1,12 @@
 .search {
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: center;
   justify-items: flex-end;
+  border: 1px blue dotted;
 
   &__box {
-    width: 30%;
+    // width: 30%;
     transition: width 0.4s ease-in-out;
     color: $color-bright;
     display: flex;
@@ -17,10 +18,10 @@
 
   &__input {
     font-size: 1rem;
-    border-radius: 5px;
     height: 1rem;
     width: 100%;
     background: $color-background;
+    background: rgb(145, 87, 87);
     border: 0;
     padding: 1rem $main-padding / 2;
   }
@@ -31,13 +32,14 @@
     height: 1.5rem;
     border-radius: 50%;
     background: $color-bright;
+    background: green;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  &__box:hover {
-    width: 60%;
-    max-width: 800px;
-  }
+  // &__box:hover {
+  //   width: 60%;
+  //   max-width: 800px;
+  // }
 }
