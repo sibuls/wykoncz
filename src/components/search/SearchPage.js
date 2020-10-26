@@ -4,9 +4,8 @@ import Search from './Search';
 const SearchPage = () => {
   return (
     <div className='menu-start'>
-      <h2 className='menu-start__title'>
-        Wybierz dział klikając w kropkę powyżej
-      </h2>
+      <h1 className='menu-start__title'>Wybierz dział klikając</h1>
+      <h1 className='menu-start__title'>w kropkę powyżej</h1>
 
       <p className='menu-start__paragraph'>lub wyszukaj specjalizację</p>
       <Search />

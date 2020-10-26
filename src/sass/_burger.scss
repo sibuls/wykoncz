@@ -10,7 +10,7 @@
     // transform: translate(0%, 0%);
     z-index: 1;
     right: $main-padding / 2;
-    top: $main-padding;
+    top: $main-padding / 2;
 
     -webkit-user-select: none;
     user-select: none;
@@ -53,8 +53,7 @@
 
   &__menu {
     position: absolute;
-    padding: $main-padding * 2 $main-padding / 2 $main-padding / 2 $main-padding /
-      4;
+    padding: $main-padding * 2 0 $main-padding 0;
     // left: calc(100% + 60px);
     right: 0;
     top: -4px;
@@ -69,7 +68,7 @@
     transform-origin: top right;
     transform: translate(10%, 0%) rotate(175deg);
 
-    transition: transform 0.2s linear;
+    transition: transform 0.3s ease-out;
 
     // border: darken($color-background, 20%) 1px solid;
 
@@ -103,7 +102,7 @@
     color: $color-background;
     transition: color 0.3s ease;
 
-    padding: $main-padding / 2;
+    padding: $main-padding / 2 $main-padding;
     // padding-left: $main-padding / 4;
     // width: 100px;
     font-weight: 600;

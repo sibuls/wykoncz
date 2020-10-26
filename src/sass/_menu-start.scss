@@ -1,8 +1,6 @@
 .menu-start {
-  // border: 2px solid red;
-  // border: rgb(46, 172, 52) 1px dotted;
-
-  padding: $main-padding * 2 0;
+  // border: 1px dotted red;
+  padding: $main-padding 0;
   width: 100vw;
   align-self: flex-start;
 
@@ -19,7 +17,7 @@
   &__title {
     // border: blue dotted 1px;
     text-align: center;
-    padding: 0 $main-padding * 4;
+    padding: $main-padding / 8;
     line-height: 1.5rem;
     font-weight: bold;
     @media (orientation: landscape) {
