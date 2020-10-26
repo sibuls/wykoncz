@@ -67,9 +67,9 @@
     -webkit-font-smoothing: antialiased;
 
     transform-origin: 0% 0%;
-    transform: translate(-200%, 0) rotate(45deg) scale(0.01);
+    transform: translate(100%, 0) rotate(95deg) scale(1);
 
-    transition: transform 0.5s linear;
+    transition: transform 0.2s linear;
 
     border: $color-background-dark 1px solid;
 
@@ -92,7 +92,7 @@
 
     opacity: 1;
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    // transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
   &__link {

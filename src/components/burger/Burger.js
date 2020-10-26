@@ -31,10 +31,6 @@ class Burger extends React.Component {
         <nav role='navigation'>
           <div className='burger__menu-toggle'>
             <input type='checkbox' className='burger__input' />
-            {/* 
-            <span style={{ background: this.state.color }}></span>
-            <span style={{ background: this.state.color }}></span>
-            <span style={{ background: this.state.color }}></span> */}
 
             <span className={this.state.burgerClassName}></span>
             <span className={this.state.burgerClassName}></span>
