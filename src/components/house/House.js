@@ -10,20 +10,18 @@ const House = (props) => {
   const createDots = professionsList.map((element, index, array) => {
     // console.log(element.id);
     return (
-      <React.Fragment>
+      <React.Fragment key={'dotrf' + element.id}>
         <Dot
-          id={element.id + ' dot'}
-          key={element.id + ' dot'}
+          id={'dot' + element.id}
+          key={'dot' + element.id}
           style={`dot dot--${element.en}`}
           profession={element.en}
           changeProfession={props.changeProfession}
           descriptionPl={element.pl}
-          // changeTint={props.changeTint}
-          // dotTint={props.dotTint}
         />
         <Description
-          id={element.id + ' decription'}
-          key={element.id + ' decription'}
+          id={'decription' + element.id}
+          key={'decription' + element.id}
           profession={element.en}
           descriptionPl={element.pl}
         />
@@ -36,7 +34,12 @@ const House = (props) => {
       <header className='house'>
         <div className='house__wrapper'>
           <div className='house__box'>
-            <img className='house__image' src={photo} alt='house' />
+            <img
+              className='house__image'
+              src={photo}
+              alt='house'
+              key='houseimage'
+            />
 
             {createDots}
           </div>

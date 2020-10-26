@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 
-const SearchPage = () => {
+const MenuSearch = () => {
   return (
     <div className='menu-start'>
       <h1 className='menu-start__title'>Wybierz dział klikając</h1>
@@ -13,4 +13,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default MenuSearch;
