@@ -2,20 +2,17 @@ import React from 'react';
 
 class Burger extends React.Component {
   state = {
-    color: '#dccdb8',
+    burgerClassName: 'burger__span',
   };
-
-  colorBackground = '#dccdb8';
-  colorDark = '#290001';
 
   listenScrollEvent = (e) => {
     console.log('listencrol aktywowany');
-    if (window.scrollY > 100) {
+    if (window.scrollY > 30) {
       console.log('listencrol poszedl w dol 400px');
 
-      this.setState({ color: this.colorDark });
+      this.setState({ burgerClassName: 'burger__span burger__span--dark' });
     } else {
-      this.setState({ color: this.colorBackground });
+      this.setState({ burgerClassName: 'burger__span' });
     }
   };
 
@@ -34,10 +31,14 @@ class Burger extends React.Component {
         <nav role='navigation'>
           <div className='burger__menu-toggle'>
             <input type='checkbox' className='burger__input' />
+            {/* 
+            <span style={{ background: this.state.color }}></span>
+            <span style={{ background: this.state.color }}></span>
+            <span style={{ background: this.state.color }}></span> */}
 
-            <span style={{ background: this.state.color }}></span>
-            <span style={{ background: this.state.color }}></span>
-            <span style={{ background: this.state.color }}></span>
+            <span className={this.state.burgerClassName}></span>
+            <span className={this.state.burgerClassName}></span>
+            <span className={this.state.burgerClassName}></span>
 
             <ul className='burger__menu'>
               <a href='#' className='burger__link'>
