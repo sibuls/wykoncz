@@ -1,6 +1,7 @@
 import React from 'react';
 
 import photo from '../../images/house.png';
+import Description from './Description';
 import Dot from './Dot';
 
 const House = (props) => {
@@ -9,16 +10,24 @@ const House = (props) => {
   const createDots = professionsList.map((element, index, array) => {
     // console.log(element.id);
     return (
-      <Dot
-        id={element.id}
-        key={element.id}
-        style={`dot dot--${element.en}`}
-        profession={element.en}
-        changeProfession={props.changeProfession}
-        descriptionPl={element.pl}
-        // changeTint={props.changeTint}
-        // dotTint={props.dotTint}
-      />
+      <React.Fragment>
+        <Dot
+          id={element.id + ' dot'}
+          key={element.id + ' dot'}
+          style={`dot dot--${element.en}`}
+          profession={element.en}
+          changeProfession={props.changeProfession}
+          descriptionPl={element.pl}
+          // changeTint={props.changeTint}
+          // dotTint={props.dotTint}
+        />
+        <Description
+          id={element.id + ' decription'}
+          key={element.id + ' decription'}
+          profession={element.en}
+          descriptionPl={element.pl}
+        />
+      </React.Fragment>
     );
   });
 

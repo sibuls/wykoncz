@@ -1,12 +1,12 @@
 .burger {
   position: fixed;
-  position: absolute;
+
   right: 0;
   top: 0;
   //   width: 1px;
   //   height: 1px;
-  //   border: royalblue 2px dotted;
-  //   background-color: red;
+  // border: royalblue 2px dotted;
+  // background-color: red;
 
   &__menu-toggle {
     // border: 2px red dotted;
@@ -14,8 +14,8 @@
     position: absolute;
     // transform: translate(0%, 0%);
     z-index: 1;
-    right: 2vw;
-    top: 2vh;
+    right: $main-padding / 2;
+    top: $main-padding;
 
     -webkit-user-select: none;
     user-select: none;
@@ -100,8 +100,8 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: $color-dark;
-    background: $color-background;
+    background: red;
+    // background: $color-background;
     border-radius: 3px;
 
     z-index: 1;

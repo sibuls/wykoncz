@@ -31,29 +31,7 @@ class App extends Component {
       descriptionPl,
       isMenuActive: true,
     }));
-
-    // this.createContractors(en);
-
-    // console.log('create cotnractor uruchomiona');
   };
-
-  // createContractors = (en) => {
-  //   // asign function which will make each <Contractor /> as we need
-
-  //   const contractorsData = [...contractors];
-  //   // console.log(contractorsData);
-  //   // console.log(this.state.pprofession);
-
-  //   // filter our database by contractor.profession
-  //   const filteredContractors = contractorsData.filter(
-  //     (contractor) => contractor.profession === en
-  //   );
-  //   // console.log(en);
-
-  //   console.log(filteredContractors);
-
-  //   // this.contractorsChoice(filteredContractors);
-  // };
 
   // changeTint = (pl) => {
   //   const dotTint = pl;
@@ -78,10 +56,7 @@ class App extends Component {
     return (
       <div className='app'>
         <Header />
-        <div className='wrapper'>
-          {/* <div className='aa'>aaa</div>
-          <div className='bb'>bb</div> */}
-
+        <div id='wrapper' className='wrapper'>
           <House
             changeProfession={this.changeProfession}
             profession={this.state.profession}
@@ -89,11 +64,6 @@ class App extends Component {
             // changeTint={this.changeTint}
             // dotTint={this.state.dotTint}
           />
-          {/* <Hamburger
-            active={this.state.burgerActive}
-            burgerChange={this.burgerChange}
-          /> */}
-
           {this.state.profession === '' ? (
             <SearchPage />
           ) : (
@@ -111,7 +81,6 @@ class App extends Component {
           isBurgerActive={this.state.isBurgerActive}
           burgerChange={this.burgerChange}
         />
-
         <Footer />
       </div>
     );

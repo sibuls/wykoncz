@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .lines {
   position: absolute;
 
@@ -19,61 +21,51 @@
     }
 
     &--fitter:after {
-      width: 90px;
-      transform: rotate(310deg);
+      width: 27vw;
+      transform: rotate(320deg);
+      @include mq(tablet) {
+        width: 35vw;
+        transform: rotate(327deg);
+      }
     }
 
     &--plasterer:after {
       transform: rotate(230deg);
-      width: 90px;
+      width: 19vw;
+      @include mq(tablet) {
+        transform: rotate(220deg);
+        width: 24vw;
+      }
     }
     &--plumber:after {
       transform: rotate(275deg);
-      width: 120px;
+      width: 34vw;
+      @include mq(tablet) {
+        transform: rotate(267deg);
+        width: 35vw;
+      }
     }
     &--electrician:after {
-      width: 150px;
+      width: 43vw;
       transform: rotate(70deg);
+      @include mq(tablet) {
+        background-color: $color-background;
+        width: 44vw;
+      }
     }
     &--tiler:after {
-      width: 75px;
+      width: 22vw;
       transform: rotate(80deg);
+      @include mq(tablet) {
+        width: 23vw;
+      }
     }
     &--carpenter:after {
-      width: 150px;
+      width: 42vw;
       transform: rotate(135deg);
-    }
-  }
-
-  &__description {
-    color: $color-font;
-    font-family: $font-hand;
-    position: absolute;
-    width: 85px;
-    text-align: center;
-    &--fitter {
-      top: -90px;
-      right: -140px;
-    }
-    &--plasterer {
-      top: -85px;
-      left: -100px;
-    }
-    &--plumber {
-      top: -140px;
-      left: -30px;
-    }
-    &--carpenter {
-      top: 110px;
-      left: -170px;
-    }
-    &--electrician {
-      top: 150px;
-      left: 0px;
-    }
-    &--tiler {
-      top: 80px;
-      left: -35px;
+      @include mq(tablet) {
+        width: 44vw;
+      }
     }
   }
 }

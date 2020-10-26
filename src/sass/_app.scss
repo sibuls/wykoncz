@@ -1,5 +1,6 @@
 .app {
   overflow: hidden;
+  position: relative;
 
   // border: 4px dotted green;
   min-height: 100vh;
@@ -31,4 +32,14 @@
   scroll-behavior: smooth;
   justify-content: center;
   justify-items: center;
+}
+
+.white {
+  color: orange;
+  background-color: green;
+}
+
+.black {
+  color: blue;
+  background-color: red;
 }

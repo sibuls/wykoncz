@@ -1,0 +1,34 @@
+@import 'mixins';
+
+.description {
+  color: $color-font;
+  font-family: $font-hand;
+  position: absolute;
+  //   width: 85px;
+  text-align: center;
+
+  &--fitter {
+    top: 5%;
+    right: 5%;
+  }
+  &--plasterer {
+    top: 18%;
+    left: 5%;
+  }
+  &--plumber {
+    top: 8%;
+    left: 30%;
+  }
+  &--carpenter {
+    bottom: 10%;
+    left: 10%;
+  }
+  &--electrician {
+    bottom: 5%;
+    right: 5%;
+  }
+  &--tiler {
+    bottom: 2%;
+    left: 40%;
+  }
+}

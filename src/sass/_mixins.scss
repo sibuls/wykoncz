@@ -1,1 +1,35 @@
 // tutaj zrobie sobie domieszki z opacity text shadow itp
+@import 'variables';
+@import 'fontsize';
+
+@mixin mq($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if ($size) {
+    @media #{$size} {
+      @content;
+    }
+  } @else {
+    @error ' "#{breakpoint}" -  doesnt exist';
+  }
+}
+
+@mixin position(
+  $position: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
