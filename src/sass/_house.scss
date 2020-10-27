@@ -2,8 +2,9 @@
   position: relative;
   // border: gray 1px dotted;
   // flex-basis: 100%;
+
+  width: 90vw;
   height: 90vw;
-  width: 90%;
 
   max-width: 1024px;
   // max-height: 800px;
@@ -11,12 +12,9 @@
   grid-area: house;
   // background-color: rgba(91, 155, 35, 0.527);
 
-  @media (orientation: landscape) {
-    // height: 100%;
-    width: 600px;
-    height: 600px;
-    // border: rgb(85, 16, 16) 2px dotted;
-    // border: gray 1px solid;
+  @media only screen and (orientation: landscape) and (min-width: 800px) {
+    width: 50vw;
+    height: 50vw;
   }
 
   &__wrapper {

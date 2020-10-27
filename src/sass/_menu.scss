@@ -1,5 +1,5 @@
 .menu {
-  // border: grey 1px solid;
+  // border: grey 1px dotted;
   width: 100%;
   display: flex;
   margin: 0 auto;
@@ -9,9 +9,8 @@
   align-content: center;
   align-items: center;
 
-  @media (orientation: landscape) {
-    width: 100%;
-
-    // border: rgb(40, 111, 40) 2px dotted;
+  @media only screen and (orientation: landscape) and (min-width: 800px) {
+    width: 50vw;
+    // height: 50vw;
   }
 }

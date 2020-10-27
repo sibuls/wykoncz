@@ -10,7 +10,7 @@ const House = (props) => {
   const createDots = professionsList.map((element, index, array) => {
     // console.log(element.id);
     return (
-      <React.Fragment>
+      <React.Fragment key={element.id + ' fragment'}>
         <Dot
           id={element.id + ' dot'}
           key={element.id + ' dot'}
@@ -33,7 +33,7 @@ const House = (props) => {
 
   return (
     <React.Fragment>
-      <header className='house'>
+      <section className='house'>
         <div className='house__wrapper'>
           <div className='house__box'>
             <img className='house__image' src={photo} alt='house' />
@@ -41,7 +41,7 @@ const House = (props) => {
             {createDots}
           </div>
         </div>
-      </header>
+      </section>
     </React.Fragment>
   );
 };

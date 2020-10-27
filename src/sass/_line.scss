@@ -21,50 +21,50 @@
     }
 
     &--fitter:after {
-      width: 27vw;
+      width: 26vw;
       transform: rotate(320deg);
       @include mq(tablet) {
-        width: 35vw;
+        width: 33vw;
         transform: rotate(327deg);
       }
     }
 
     &--plasterer:after {
       transform: rotate(230deg);
-      width: 19vw;
+      width: 18vw;
       @include mq(tablet) {
         transform: rotate(220deg);
-        width: 24vw;
+        width: 23vw;
       }
     }
     &--plumber:after {
       transform: rotate(275deg);
-      width: 34vw;
+      width: 31vw;
       @include mq(tablet) {
         transform: rotate(267deg);
-        width: 35vw;
+        width: 32vw;
       }
     }
     &--electrician:after {
-      width: 43vw;
+      width: 40vw;
       transform: rotate(70deg);
       @include mq(tablet) {
         background-color: $color-background;
-        width: 44vw;
+        width: 41vw;
       }
     }
     &--tiler:after {
-      width: 22vw;
+      width: 21vw;
       transform: rotate(80deg);
       @include mq(tablet) {
-        width: 23vw;
+        width: 22vw;
       }
     }
     &--carpenter:after {
-      width: 42vw;
+      width: 40vw;
       transform: rotate(135deg);
       @include mq(tablet) {
-        width: 44vw;
+        width: 40vw;
       }
     }
   }

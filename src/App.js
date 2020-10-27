@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
-import SearchPage from './components/search/SearchPage';
 import contractors from './data/contractors.js';
 import professions from './data/professions.js';
 import Burger from './components/burger/Burger';
@@ -64,19 +63,16 @@ class App extends Component {
             // changeTint={this.changeTint}
             // dotTint={this.state.dotTint}
           />
-          {this.state.profession === '' ? (
-            <SearchPage />
-          ) : (
-            <Menu
-              professions={this.state.professions}
-              profession={this.state.profession}
-              // pprofession={this.state.pprofession}
-              descriptionPl={this.state.descriptionPl}
-              contractors={this.state.contractors}
-            />
-          )}
+          <Menu
+            professions={this.state.professions}
+            profession={this.state.profession}
+            // pprofession={this.state.pprofession}
+            descriptionPl={this.state.descriptionPl}
+            contractors={this.state.contractors}
+          />
           <ContractorsList />
         </div>
+
         <Burger
           isBurgerActive={this.state.isBurgerActive}
           burgerChange={this.burgerChange}
