@@ -23,7 +23,7 @@
   justify-items: center;
   margin: 0 auto;
 
-  @media only screen and (orientation: landscape) and (min-width: 800px) {
+  @media only screen and (orientation: landscape) and (min-width: 1200px) {
     background-color: #fff;
     grid-template:
       'menu house'
