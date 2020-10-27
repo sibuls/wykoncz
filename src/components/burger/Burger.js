@@ -21,6 +21,8 @@ class Burger extends React.Component {
     console.log('burger zamontowany');
   }
 
+  handleSearch = () => console.log('handle search klik');
+
   render() {
     return (
       <div
@@ -44,13 +46,26 @@ class Burger extends React.Component {
                 <li className='burger__li'>Rejestracja</li>
               </a>
 
-              <a href='#' className='burger__link'>
-                <li className='burger__li'>
-                  Szukaj <i className='fas fa-search burger__search-ico '></i>
+              <a
+                href='#'
+                className='burger__link'
+                onClick={() => this.props.changeProfession('')}
+              >
+                <li className='burger__li burger__li--search'>
+                  Szukaj
+                  <i className='fas fa-search burger__search-ico '></i>{' '}
+                  wykonawcy
                 </li>
               </a>
               <a
-                href='https://erikterwan.com/'
+                href='https://www.google.com/'
+                target='_blank'
+                className='burger__link'
+              >
+                <li className='burger__li'>Złóż ofertę</li>
+              </a>
+              <a
+                href='https://www.google.com/'
                 target='_blank'
                 className='burger__link'
               >

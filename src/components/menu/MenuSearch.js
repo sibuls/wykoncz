@@ -16,7 +16,7 @@ const MenuSearch = () => {
             placeholder='Wyszukaj ...'
           />
           <button className='menu-search__button'>
-            <i class='fas fa-search search__ico'></i>
+            <i className='fas fa-search search__ico'></i>
           </button>
         </div>
       </form>

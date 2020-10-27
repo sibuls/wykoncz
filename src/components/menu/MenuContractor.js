@@ -3,8 +3,6 @@ import React from 'react';
 const MenuContractor = (props) => {
   // console.log(props.contractors);
 
-  console.log(props);
-
   return (
     <div className='contractor'>
       <img className='contractor__image' src='' alt='' />

@@ -1,22 +1,20 @@
-// import React from 'react';
-// import MenuItem from './MenuItem';
+import React from 'react';
+import MenuContractors from './MenuContractors';
+import MenuImage from './MenuImage';
 
-// const Menu = (props) => {
-//   const menu = props.menu.map((menuItem) => (
-//     <MenuItem
-//       key={menuItem.id}
-//       id={menuItem.id}
-//       en={menuItem.en}
-//       pl={menuItem.pl}
-//       link={menuItem.link}
-//     />
-//   ));
+const MenuList = (props) => {
+  return (
+    <div className='menu-list'>
+      <MenuContractors
+        contractors={props.contractors}
+        professions={props.professions}
+        profession={props.profession}
+        // pprofession={props.pprofession}
+        descriptionPl={props.descriptionPl}
+      />
+      <MenuImage profession={props.profession} />
+    </div>
+  );
+};
 
-//   return (
-//     <div className='menu'>
-//       // <h2 className='menu__title'>Wybierz kategorię</h2>
-//     </div>
-//   );
-// };
-
-// export default Menu;
+export default MenuList;

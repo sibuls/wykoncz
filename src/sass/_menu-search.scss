@@ -15,23 +15,24 @@
   &__title {
     // border: blue dotted 1px;
     text-align: center;
-    padding: $main-padding / 8;
-    line-height: 1.5rem;
+    padding: $main-padding / 6;
+    // line-height: 1.5rem;
     font-weight: bold;
     @media (orientation: landscape) {
-      padding: $main-padding / 2;
+      padding: $main-padding / 6;
     }
   }
 
   &__paragraph {
     text-align: center;
     // padding-bottom: $main-padding;
-    padding: $main-padding 0;
+    padding: $main-padding 0 $main-padding / 2;
 
     @media (orientation: landscape) {
       // padding-bottom: $main-padding;
 
       padding: $main-padding 0;
+      padding: $main-padding 0 $main-padding / 2;
     }
   }
 

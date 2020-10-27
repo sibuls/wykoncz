@@ -85,6 +85,13 @@
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     }
   }
+  &__li {
+    line-height: 1.5rem;
+
+    &--search {
+      position: relative;
+    }
+  }
 
   &__input:checked ~ ul {
     transform: translate(10%, 0) rotate(5deg);
@@ -149,5 +156,54 @@
 
   &__search-ico {
     padding-left: 1rem;
+    font-size: 1.4rem;
+    position: absolute;
+    transform-origin: center center;
+    color: $color-background-dark;
+
+    animation: search 8s infinite alternate linear;
+  }
+}
+
+@keyframes search {
+  0% {
+    transform: rotate(0deg);
+    right: 20%;
+    top: 0;
+  }
+  14% {
+    transform: rotate(10deg);
+    right: 0%;
+    top: 0%;
+  }
+  28% {
+    transform: rotate(20deg);
+    right: 0%;
+    top: 10%;
+  }
+  42% {
+    transform: rotate(10deg);
+    right: 16%;
+    top: 5%;
+  }
+  56% {
+    transform: rotate(0deg);
+    right: 18%;
+    top: 8%;
+  }
+  70% {
+    transform: rotate(0deg);
+    right: -5%;
+    top: 2%;
+  }
+  84% {
+    transform: rotate(10deg);
+    right: -7%;
+    top: 8%;
+  }
+  100% {
+    transform: rotate(20deg);
+    right: 20%;
+    top: 0%;
   }
 }

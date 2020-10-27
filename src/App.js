@@ -48,7 +48,7 @@ class App extends Component {
 
   burgerChange = (id) => {
     this.setState({ isBurgerActive: !this.state.isBurgerActive });
-    console.log('burger has been clicked');
+    // console.log('burger has been clicked');
   };
 
   render() {
@@ -76,6 +76,7 @@ class App extends Component {
         <Burger
           isBurgerActive={this.state.isBurgerActive}
           burgerChange={this.burgerChange}
+          changeProfession={this.changeProfession}
         />
         <Footer />
       </div>

@@ -3,7 +3,9 @@ import React from 'react';
 const ContractorsList = () => {
   return (
     <section className='contractors-list'>
-      <h1 className='contractors-list__title'>Znaleziono 871 wykonawców </h1>
+      <div className='contractors-list__wrapper'>
+        <h2 className='contractors-list__title'>Lista wykonawców: 87 </h2>
+      </div>
     </section>
   );
 };

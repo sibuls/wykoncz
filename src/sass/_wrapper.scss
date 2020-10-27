@@ -3,7 +3,7 @@
 
   display: grid;
   position: relative;
-  // border: 2px dotted red;
+  // border: 2px dotted blue;
   min-height: 100vh;
   // height: 100%;
   max-width: 1280px;
@@ -23,7 +23,7 @@
   justify-items: center;
   margin: 0 auto;
 
-  @media only screen and (orientation: landscape) and (min-width: 1200px) {
+  @media only screen and (orientation: landscape) and (min-width: 1024px) {
     background-color: #fff;
     grid-template:
       'menu house'
