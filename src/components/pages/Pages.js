@@ -1,9 +1,10 @@
 import React from 'react';
 import MenuSearch from '../menu/MenuSearch';
 import MenuList from '../menu/MenuList';
-import Login from '../login/login';
+import Login from '../loginPage/login/Login';
 import Advertisments from '../advertisments/Advertisments';
-import Register from '../registration/Register';
+import Register from '../loginPage/register/Register';
+import LoginPage from '../loginPage/LoginPage';
 
 const Pages = (props) => {
   const burgerChoice = props.burgerChoice;
@@ -23,9 +24,9 @@ const Pages = (props) => {
           />
         );
       case 'login':
-        return <Login />;
+        return <LoginPage />;
       case 'register':
-        return <Register />;
+        return <LoginPage />;
       case 'advertisment':
         return <Advertisments />;
       default:

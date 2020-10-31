@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 
-const Description = (props) => {
-  return (
-    <p
-      className={`description  description--${props.descriptionEn} ${
-        props.profession === props.descriptionEn ? `description-active` : null
-      } `}
-      onClick={() =>
-        props.changeProfession(
-          props.descriptionEn,
-          props.descriptionPl,
-          'menuList'
-        )
-      }
-    >
-      {props.descriptionPl}
-    </p>
-  );
-};
+class Description extends PureComponent {
+  render() {
+    return (
+      <p
+        className={`description  description--${this.props.descriptionEn} ${
+          this.props.profession === this.props.descriptionEn
+            ? `description-active`
+            : null
+        } `}
+        onClick={() =>
+          this.props.changeProfession(
+            this.props.descriptionEn,
+            this.props.descriptionPl,
+            'menuList'
+          )
+        }
+      >
+        {this.props.descriptionPl}
+      </p>
+    );
+  }
+}
 
 export default Description;

@@ -1,27 +1,23 @@
 import React from 'react';
 import Line from './Line';
 
-const Dot = (props) => {
+const Dot = ({ changeProfession, descriptionEn, descriptionPl, id, style }) => {
   return (
     <React.Fragment>
       <div
-        key={`${props.id}dot`}
-        id={`${props.id}dot`}
-        className={props.style}
+        key={`${id}dot`}
+        id={`${id}dot`}
+        className={style}
         onClick={() =>
-          props.changeProfession(
-            props.descriptionEn,
-            props.descriptionPl,
-            'menuList'
-          )
+          changeProfession(descriptionEn, descriptionPl, 'menuList')
         }
       ></div>
 
       <Line
-        key={`${props.id}line`}
-        id={`${props.id}line`}
-        descriptionEn={props.descriptionEn}
-        descriptionPl={props.descriptionPl}
+        key={`${id}line`}
+        id={`${id}line`}
+        descriptionEn={descriptionEn}
+        descriptionPl={descriptionPl}
       />
     </React.Fragment>
   );

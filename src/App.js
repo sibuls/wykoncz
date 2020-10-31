@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Footer from './components/footer/Footer';
 import Menu from './components/pages/Pages';
 import contractors from './data/contractors.js';
@@ -9,9 +9,14 @@ import Header from './components/header/Header';
 import Pages from './components/pages/Pages';
 import ContractorsList from './components/contractors/ContractorsList';
 import './sass/style.scss';
+import { AppContext, defaultObject } from './AppContext';
+import UserInfo from './UserInfo';
+import Button from './Button';
 
-class App extends Component {
+class App extends PureComponent {
   state = {
+    isUserLogged: defaultObject.isUserLogged,
+
     isBurgerActive: false,
     professions: [],
     profession: '',
@@ -60,6 +65,11 @@ class App extends Component {
     });
   };
 
+  handleToggleStateIsLogged = () =>
+    this.setState((prevState) => ({
+      isUserLogged: !prevState.isUserLogged,
+    }));
+
   render() {
     console.log(this.state.profession + ' ---- app this state prof');
     return (
@@ -84,14 +94,22 @@ class App extends Component {
           />
           <ContractorsList />
         </div>
-
         <Burger
           isBurgerActive={this.state.isBurgerActive}
           burgerChange={this.burgerChange}
           changeProfession={this.changeProfession}
           burgerChoice={this.burgerChoice}
         />
-        <Footer />
+        <Footer />{' '}
+        <AppContext.Provider
+          value={{
+            isUserLogged: this.state.isUserLogged,
+            toggleLoggedState: this.handleToggleStateIsLogged,
+          }}
+        >
+          <UserInfo />
+          <Button />
+        </AppContext.Provider>
       </div>
     );
   }
