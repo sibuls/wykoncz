@@ -20,7 +20,7 @@
       transform-origin: top left;
     }
 
-    &--fitter:after {
+    &--carpenter:after {
       width: 26vw;
       transform: rotate(320deg);
       @include mq(tablet) {
@@ -45,7 +45,7 @@
         width: 32vw;
       }
     }
-    &--electrician:after {
+    &--others:after {
       width: 40vw;
       transform: rotate(70deg);
       @include mq(tablet) {
@@ -60,7 +60,7 @@
         width: 22vw;
       }
     }
-    &--carpenter:after {
+    &--electrician:after {
       width: 40vw;
       transform: rotate(135deg);
       @include mq(tablet) {

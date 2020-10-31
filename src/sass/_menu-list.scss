@@ -1,41 +1,37 @@
 .menu-list {
-  display: flex;
+  // border: 1px dotted green;
+  padding-top: $main-padding;
+  &__title {
+    font-weight: bold;
+    // margin left has to be size of image width from contractor image
+    // margin-left: 40px;
+    padding: $main-padding / 2 0 $main-padding / 2 $main-padding * 1.5;
+    width: 100%;
+    letter-spacing: 1px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+
+    flex-wrap: wrap;
+    height: 50vw;
+  }
 }
 
 .contractors {
   width: 50%;
-  // margin: $main-padding;
 
-  // border: 1px dotted green;
+  // border: 1px dotted rgb(141, 35, 150);
 
-  &__title {
-    // font-size: 2rem;
-    font-weight: bold;
-    // width: 100%;
+  display: flex;
+  align-items: center;
 
-    // margin left has to be size of image width from contractor image
-    margin-left: 40px;
-
-    padding: $main-padding / 2 0 $main-padding / 2 $main-padding * 1.5;
-    // border: 1px dotted green;
-    // color: white;
-    // color: $color-background-dark;
-    opacity: 1;
-    // color: darken($color-background-dark, 15%);
-  }
-
-  &__list {
-    // border: 2px dotted red;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: $main-padding / 2;
-  }
+  flex-wrap: wrap;
 }
 
 .contractor {
   width: 100%;
-  // border: 1px dotted rgb(43, 55, 122);
   display: flex;
   align-items: center;
   margin: $main-padding / 2 $main-padding;
@@ -50,7 +46,7 @@
   }
 
   &__image {
-    border: 1px $color-light solid;
+    border: 3px $color-background-dark double;
     width: 40px;
     height: 40px;
     // margin: $main-padding / 2;
@@ -64,12 +60,16 @@
   // padding: $main-padding / 2;
   // border: 1px dotted red;
   // height: 30vh;
+  display: flex;
+  justify-content: center;
+  // align-items: flex-end;
 
   &__image-box {
     width: 100%;
-
-    margin: 0 auto;
+    margin: $main-padding / 2 $main-padding;
+    // margin-top: $main-padding * 1.5;
     // padding: $main-padding / 2;
+    // border: 1px dotted rgb(43, 55, 122);
   }
 
   &__image {

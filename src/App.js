@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 import Footer from './components/footer/Footer';
-import Menu from './components/menu/Menu';
+import Menu from './components/pages/Pages';
 import contractors from './data/contractors.js';
 import professions from './data/professions.js';
 import Burger from './components/burger/Burger';
 import House from './components/house/House';
 import Header from './components/header/Header';
+import Pages from './components/pages/Pages';
 import ContractorsList from './components/contractors/ContractorsList';
 import './sass/style.scss';
 
 class App extends Component {
   state = {
-    isBurgerActive: true,
+    isBurgerActive: false,
     professions: [],
     profession: '',
     descriptionPl: '',
     // dotTint: '',
     pprofession: '',
     contractors: [],
+    burgerChoice: '',
   };
 
-  changeProfession = (en, pl) => {
+  changeProfession = (en, pl, burgerChoice) => {
     const profession = en;
     const descriptionPl = pl;
 
@@ -29,6 +31,7 @@ class App extends Component {
       pprofession: prevstate.profession,
       descriptionPl,
       isMenuActive: true,
+      burgerChoice,
     }));
   };
 
@@ -51,7 +54,14 @@ class App extends Component {
     // console.log('burger has been clicked');
   };
 
+  burgerChoice = (burgerChoice) => {
+    this.setState({
+      burgerChoice,
+    });
+  };
+
   render() {
+    console.log(this.state.profession + ' ---- app this state prof');
     return (
       <div className='app'>
         <Header />
@@ -63,12 +73,14 @@ class App extends Component {
             // changeTint={this.changeTint}
             // dotTint={this.state.dotTint}
           />
-          <Menu
+
+          <Pages
             professions={this.state.professions}
             profession={this.state.profession}
             // pprofession={this.state.pprofession}
             descriptionPl={this.state.descriptionPl}
             contractors={this.state.contractors}
+            burgerChoice={this.state.burgerChoice}
           />
           <ContractorsList />
         </div>
@@ -77,6 +89,7 @@ class App extends Component {
           isBurgerActive={this.state.isBurgerActive}
           burgerChange={this.burgerChange}
           changeProfession={this.changeProfession}
+          burgerChoice={this.burgerChoice}
         />
         <Footer />
       </div>

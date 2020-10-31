@@ -5,6 +5,7 @@ import Description from './Description';
 import Dot from './Dot';
 
 const House = (props) => {
+  // console.log(props.profession + ' ---- house pros prof');
   const professionsList = [...props.professions];
 
   const createDots = professionsList.map((element, index, array) => {
@@ -15,17 +16,18 @@ const House = (props) => {
           id={element.id + ' dot'}
           key={element.id + ' dot'}
           style={`dot dot--${element.en}`}
-          profession={element.en}
+          descriptionEn={element.en}
           changeProfession={props.changeProfession}
           descriptionPl={element.pl}
-          // changeTint={props.changeTint}
-          // dotTint={props.dotTint}
         />
         <Description
           id={element.id + ' decription'}
           key={element.id + ' decription'}
-          profession={element.en}
+          descriptionEn={element.en}
           descriptionPl={element.pl}
+          descriptionPl2={element.pl2}
+          profession={props.profession}
+          changeProfession={props.changeProfession}
         />
       </React.Fragment>
     );

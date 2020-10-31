@@ -2,26 +2,20 @@ import React from 'react';
 
 class Burger extends React.Component {
   state = {
-    burgerClassName: 'burger__span',
+    burgerSpanName: 'burger__span',
   };
 
   listenScrollEvent = (e) => {
-    console.log('listencrol aktywowany');
     if (window.scrollY > 30) {
-      console.log('listencrol poszedl w dol 400px');
-
-      this.setState({ burgerClassName: 'burger__span burger__span--dark' });
+      this.setState({ burgerSpanName: 'burger__span burger__span--dark' });
     } else {
-      this.setState({ burgerClassName: 'burger__span' });
+      this.setState({ burgerSpanName: 'burger__span' });
     }
   };
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent);
-    console.log('burger zamontowany');
   }
-
-  handleSearch = () => console.log('handle search klik');
 
   render() {
     return (
@@ -33,23 +27,47 @@ class Burger extends React.Component {
         <nav role='navigation'>
           <div className='burger__menu-toggle'>
             <input type='checkbox' className='burger__input' />
+            {/* <input
+              type='checkbox'
+              className={
+                this.props.isBurgerActive
+                  ? 'burger__input burger__input--active'
+                  : 'burger__input'
+              }
+            /> */}
 
-            <span className={this.state.burgerClassName}></span>
-            <span className={this.state.burgerClassName}></span>
-            <span className={this.state.burgerClassName}></span>
+            <span className={this.state.burgerSpanName}></span>
+            <span className={this.state.burgerSpanName}></span>
+            <span className={this.state.burgerSpanName}></span>
 
-            <ul className='burger__menu'>
-              <a href='#' className='burger__link'>
+            <ul
+              // className={
+              //   this.props.isBurgerActive
+              //     ? 'burger__menu burger__menu--active'
+              //     : 'burger__menu'
+              // }
+              className='burger__menu'
+            >
+              <a
+                href='#'
+                className='burger__link'
+                onClick={() => this.props.burgerChoice('login')}
+              >
                 <li className='burger__li'>Login</li>
               </a>
-              <a href='#' className='burger__link'>
+              <a
+                href='#'
+                className='burger__link'
+                onClick={() => this.props.burgerChoice('register')}
+              >
                 <li className='burger__li'>Rejestracja</li>
               </a>
 
               <a
                 href='#'
                 className='burger__link'
-                onClick={() => this.props.changeProfession('')}
+                // onClick={() => this.props.changeProfession('')}
+                onClick={() => this.props.burgerChoice('search')}
               >
                 <li className='burger__li burger__li--search'>
                   Szukaj
@@ -58,16 +76,14 @@ class Burger extends React.Component {
                 </li>
               </a>
               <a
-                href='https://www.google.com/'
-                target='_blank'
                 className='burger__link'
+                onClick={() => this.props.burgerChoice('advertisment')}
               >
                 <li className='burger__li'>Złóż ofertę</li>
               </a>
               <a
-                href='https://www.google.com/'
-                target='_blank'
                 className='burger__link'
+                onClick={() => this.props.burgerChoice('professions')}
               >
                 <li className='burger__li'>Działy </li>
               </a>

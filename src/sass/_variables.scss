@@ -6,9 +6,11 @@ $color-dark: #290001;
 $color-house-line: #6d2223;
 $color-font: lighten(#290001, 5%);
 
-$color-background: #dccdb8;
-$color-background-dark: rgb(185, 170, 147);
-// $color-background: #93846c;
+// $color-background: #dccdb8;
+// $color-background-dark: rgb(185, 170, 147);
+
+$color-background: lighten(#dccdb8, 0%);
+$color-background-dark: lighten(rgb(185, 170, 147), 0%);
 
 // $xs-font-size: 12px;
 $xs-font-size: 12px;

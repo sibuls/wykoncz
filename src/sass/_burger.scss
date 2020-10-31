@@ -54,34 +54,25 @@
   &__menu {
     position: absolute;
     padding: $main-padding * 2 0 $main-padding 0;
-    // left: calc(100% + 60px);
     right: 0;
     top: -4px;
-
-    background-color: rgba($color: $color-background, $alpha: 0.9);
-    background-color: rgba($color: lighten($color-dark, 0%), $alpha: 0.8);
-
     background-color: rgba($color: darken($color-house-line, 0%), $alpha: 0.95);
-
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: top right;
     transform: translate(10%, 0%) rotate(175deg);
-
-    transition: transform 0.3s ease-out;
-
-    // border: darken($color-background, 20%) 1px solid;
-
+    transition: transform 0.8s ease-in-out;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 88%);
     opacity: 1;
 
-    // border: 2px red dotted;
+    &--active {
+      transform: translate(10%, 0%) scale(0.3);
+      background-color: red;
+    }
 
     @media (max-resolution: 1dppx), (min-width: 1281px) {
       transform: translate(-100%, 0) rotate(5deg) scale(1);
-
       opacity: 1;
-
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     }
   }
@@ -93,12 +84,16 @@
     }
   }
 
-  &__input:checked ~ ul {
+  &__input:checked ~ &__menu {
+    // start values : transform: translate(10%, 0%) rotate(175deg);
+
     transform: translate(10%, 0) rotate(5deg);
+  }
 
-    opacity: 1;
+  &__input:not(:checked) ~ &__menu {
+    // start values : transform: translate(10%, 0%) rotate(175deg);
 
-    // transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transform: translate(10%, 0) rotate(45deg) scale (0.4);
   }
 
   &__link {

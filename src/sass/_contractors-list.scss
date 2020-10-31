@@ -7,7 +7,8 @@
   // background-color: rgba(97, 37, 23, 0.666);
 
   &__wrapper {
-    margin: 0 auto;
+    margin: $main-padding auto;
+
     width: 95%;
     height: 100%;
     // padding: $main-padding 0;
