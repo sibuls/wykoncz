@@ -2,6 +2,7 @@ import React from 'react';
 import plumber from '../../images/plumber.png';
 import carpenter from '../../images/carpenter.png';
 import plasterer from '../../images/plasterer.png';
+import tiler from '../../images/tiler6.png';
 
 const MenuImage = (props) => {
   console.log(props.profession);
@@ -16,6 +17,8 @@ const MenuImage = (props) => {
         return carpenter;
       case 'plasterer':
         return plasterer;
+      case 'tiler':
+        return tiler;
       case 'register':
         return <Register />;
       case 'advertisment':

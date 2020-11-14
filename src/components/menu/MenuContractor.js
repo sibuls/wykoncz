@@ -1,5 +1,6 @@
 import React from 'react';
 import photo from '../../images/contractors/plumber-2.jpg';
+// import photo from '../../images/contractors/tiler.png';
 
 const MenuContractor = (props) => {
   // console.log(props.contractors);
