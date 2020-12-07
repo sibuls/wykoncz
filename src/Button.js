@@ -5,8 +5,11 @@ const Button = () => {
   const { toggleLoggedState } = useContext(AppContext);
 
   return (
-    <div className='btn3'>
-      <button onClick={toggleLoggedState}>kliknij</button>
+    <div className='button-wrapper'>
+      {' '}
+      <button className='  login__button' onClick={toggleLoggedState}>
+        Zaloguj
+      </button>
     </div>
   );
 };

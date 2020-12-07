@@ -24,9 +24,9 @@
   margin: 0 auto;
 
   @media only screen and (orientation: landscape) and (min-width: 1024px) {
-    background-color: #fff;
+    // background-color: #fff;
     grid-template:
-      'menu house'
+      'house menu'
       'contractorslist contractorslist';
 
     grid-template-rows: auto auto;

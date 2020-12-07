@@ -20,7 +20,7 @@ class Burger extends React.Component {
   render() {
     return (
       <div
-        className='burger'
+        className='burger wide'
         onClick={() => this.props.burgerChange()}
         active={this.props.active}
       >
@@ -48,20 +48,22 @@ class Burger extends React.Component {
               // }
               className='burger__menu'
             >
+              <div className='burger__menu-cover'></div>
               <a
                 href='#'
-                className='burger__link'
+                className='burger__link  burger__link--login  '
                 onClick={() => this.props.burgerChoice('login')}
               >
-                <li className='burger__li'>Login</li>
+                <li className='burger__li  burger__li--login '>Moje konto</li>
               </a>
+              {/*               
               <a
                 href='#'
                 className='burger__link'
                 onClick={() => this.props.burgerChoice('register')}
               >
                 <li className='burger__li'>Rejestracja</li>
-              </a>
+              </a> */}
 
               <a
                 href='#'
@@ -85,7 +87,7 @@ class Burger extends React.Component {
                 className='burger__link'
                 onClick={() => this.props.burgerChoice('professions')}
               >
-                <li className='burger__li'>Działy </li>
+                <li className='burger__li'>Działy budowlane </li>
               </a>
             </ul>
           </div>

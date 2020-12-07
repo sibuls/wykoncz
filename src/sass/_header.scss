@@ -7,6 +7,23 @@
 
   // border: blue dotted 1px;
 
+  &__cover {
+    display: none;
+
+    @media (max-resolution: 1dppx), (min-width: 1366px) {
+      display: block;
+      position: absolute;
+      z-index: 5;
+      background: $color-dark;
+      top: 0;
+      left: 50%;
+      width: 5%;
+      height: 58px;
+
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+  }
+
   &__wrapper {
     height: 100%;
     max-width: 1280px;
@@ -45,5 +62,9 @@
 
   .brand {
     text-shadow: 5px 5px 5px black;
+  }
+
+  @media only screen and (orientation: landscape) and (min-width: 1366px) {
+    height: 58px;
   }
 }

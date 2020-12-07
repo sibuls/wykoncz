@@ -3,11 +3,11 @@ import { AppContext } from './AppContext';
 
 const UserInfo = () => {
   const { isUserLogged } = useContext(AppContext);
-  const isloggedInfo = isUserLogged ? 'zalogowany ' : 'niezalgfgowaony';
+  const isloggedInfo = isUserLogged ? 'zalogowany ' : 'niezalogowany';
 
   return (
     <div>
-      <p>uzytkownik jest... {isloggedInfo}</p>
+      <p>uzytkownik jest {isloggedInfo}</p>
     </div>
   );
 };
