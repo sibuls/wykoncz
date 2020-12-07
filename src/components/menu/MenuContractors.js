@@ -30,13 +30,9 @@ const MenuContractors = (props) => {
   return (
     <React.Fragment>
       <div className='contractors'>
-        <h2 className='contractors__title'>{props.descriptionPl}</h2>
-
-        <div className='contractors__list'>
-          {showContractor}
-          {/* {showContractor} */}
-          {/* <Contractor contractors={this.state.contractors} /> */}
-        </div>
+        {showContractor}
+        {/* {showContractor} */}
+        {/* <Contractor contractors={this.state.contractors} /> */}
       </div>
     </React.Fragment>
   );

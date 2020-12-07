@@ -1,32 +1,70 @@
 .header {
   width: 100%;
-  height: 10vh;
+  height: 38px;
   background-color: $color-dark;
-  // background-color: $color-regular;
-  //   border: 2px green dotted;
   grid-area: header;
-  clip: rect(auto, auto, auto, auto);
+  // clip: rect(auto, auto, auto, auto);
+
+  // border: blue dotted 1px;
+
+  &__cover {
+    display: none;
+
+    @media (max-resolution: 1dppx), (min-width: 1366px) {
+      display: block;
+      position: absolute;
+      z-index: 5;
+      background: $color-dark;
+      top: 0;
+      left: 50%;
+      width: 5%;
+      height: 58px;
+
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+  }
 
   &__wrapper {
     height: 100%;
-
     max-width: 1280px;
-    // border: 2px blue dotted;
-    margin: 0 auto;
-    // height: 90%;
-
-    // padding: $main-padding / 2;
+    // border: red dotted 1px;
+    // align-items: center;
   }
-  &__logo-wrapper {
-    // width: 30px;
+  &__logo-container {
+    display: flex;
     height: 100%;
-    margin-left: 3vw;
-    // border: 2px blue dotted;
-    padding: $main-padding / 2 0;
+    width: calc(100% - 50px);
+    align-items: center;
+    justify-content: left;
+    // border: orange dotted 1px;
   }
 
   &__logo {
     height: 100%;
-    // border: 2px blue dotted;
+  }
+
+  &__brand {
+    // border: $color-dark dotted 1px;
+    color: $color-background;
+    // font-size: 1.5rem;
+    font-family: $font-commisioner;
+    font-family: $font-merr;
+    font-family: $font-ale;
+    font-family: $font-draper;
+    padding: 0 $main-padding / 2;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    // font-weight: bold;
+
+    // width: 70%;
+    // text-align: center;
+  }
+
+  .brand {
+    text-shadow: 5px 5px 5px black;
+  }
+
+  @media only screen and (orientation: landscape) and (min-width: 1366px) {
+    height: 58px;
   }
 }

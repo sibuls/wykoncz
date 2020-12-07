@@ -28,9 +28,10 @@ const professions = [
 
   {
     id: 5,
-    description: 'window/door fitter',
-    en: 'fitter',
-    pl: 'Montaż drzwi i okien',
+    description: 'others',
+    en: 'others',
+    pl: 'Pozostałe',
+    // pl2: 'Stolarka',
   },
   {
     id: 6,

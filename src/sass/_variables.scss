@@ -1,14 +1,36 @@
 // $color-bright: rgb(152, 152, 152);
 $color-bright: #dbcbbd;
+
 $color-light: #c87941;
 $color-regular: #87431d;
 $color-dark: #290001;
+$color-dark: lighten(rgb(205, 195, 180), 0%);
 $color-house-line: #6d2223;
 $color-font: lighten(#290001, 5%);
 
-$color-background: #dccdb8;
-$color-background-dark: rgb(185, 170, 147);
-// $color-background: #93846c;
+// $color-background: #dccdb8;
+// $color-background-dark: rgb(185, 170, 147);
+
+$color-background: lighten(#dccdb8, 0%);
+$color-background: lighten(rgb(210, 196, 174), 0%);
+$color-background: lighten(rgb(213, 207, 162), 0%);
+$color-background-dark: lighten(rgb(185, 170, 147), 0%);
+$color-background-dark: #faf4ea;
+$color-background-dark: #755c30;
+
+// $color-background-dark: linear-gradient(
+//     135deg,
+//     rgba(#bdb9ab, 1) 1%,
+//     rgba(#787056, 1) 10%,
+//     rgba(#d7cdae, 1) 30%,
+//     rgba(#e6e0d0, 1) 50%,
+//     rgba(#a7a18c, 1) 80%,
+//     rgba(#bfb69b, 1) 100%
+//   ),
+//   rgb(97, 68, 36);
+
+// color of paper
+$color-paper: #e9e4c9;
 
 // $xs-font-size: 12px;
 $xs-font-size: 12px;
@@ -20,6 +42,9 @@ $font-imb: 'IBM Plex Sans', sans-serif;
 $font-montserrat: 'Montserrat', sans-serif;
 $font-commisioner: 'Commissioner', sans-serif;
 $font-hand: 'Nothing You Could Do', cursive;
+$font-merr: 'Merriweather', serif;
+$font-ale: 'Alegreya', serif;
+$font-draper: 'Draper', sans-serif;
 
 $main-padding: 20px;
 $main-margin-responsive: 20px;

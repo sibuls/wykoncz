@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'variables';
+@import 'mixins';
 @import 'fontsize';
 @import 'app';
 @import 'wrapper';
@@ -7,15 +8,14 @@
 @import 'header';
 @import 'house';
 @import 'menu';
-@import 'menu-start';
+@import 'menu-search';
+@import 'menu-list';
 @import 'users';
 @import 'footer';
-@import 'search';
 @import 'dot';
-@import 'profession';
-@import 'contractors';
 @import 'burger';
 @import 'line';
 @import 'contractors-list';
 @import 'description';
-@import 'mixins';
+@import 'login';
+@import 'paper';

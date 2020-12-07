@@ -41,6 +41,36 @@ const contractors = [
     image: 'zdjecie',
     profession: 'carpenter',
   },
+  {
+    id: 8,
+    name: 'Okna - remonty',
+    image: 'zdjecie',
+    profession: 'fitter',
+  },
+  {
+    id: 9,
+    name: 'Montaż okien',
+    image: 'zdjecie',
+    profession: 'fitter',
+  },
+  {
+    id: 10,
+    name: 'Verda -profesjolane drzwi',
+    image: 'zdjecie',
+    profession: 'fitter',
+  },
+  {
+    id: 11,
+    name: 'Stolarz',
+    image: 'zdjecie',
+    profession: 'carpenter',
+  },
+  {
+    id: 12,
+    name: 'Tynkowanie',
+    image: 'zdjecie',
+    profession: 'plasterer',
+  },
 ];
 
 export default contractors;

@@ -5,17 +5,17 @@
   // border: 4px dotted green;
   min-height: 100vh;
   width: 100vw;
-  // border: royalblue 2px dotted;
+  border: royalblue 2px dotted;
 
   background: linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0) 1%,
+      rgba(255, 255, 255, 0) 30%,
       rgba(255, 255, 255, 0) 50%,
-      rgba($color-background-dark, 1) 50.1%,
-      rgba($color-background-dark, 1) 85.1%,
-      rgba($color-background-dark, 1) 100%
+      rgba(#bdb9ab, 1) 50.1%,
+      rgba(#787056, 1) 85.1%,
+      rgba(#d7cdae, 1) 100%
     ),
-    $color-background;
+    rgba(#e6e0d0, 1);
 
   display: grid;
   grid-template:

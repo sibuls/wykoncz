@@ -1,0 +1,83 @@
+.menu-search {
+  // border: 1px dotted red;
+  padding: $main-padding 0;
+  width: 100%;
+  align-self: flex-start;
+
+  letter-spacing: 0.1rem;
+  color: $color-dark;
+  // background-color: rgba(39, 103, 64, 0.475);
+
+  @media only screen and (orientation: landscape) {
+    padding: $main-padding * 2 0;
+  }
+
+  &__title {
+    // border: blue dotted 1px;
+    text-align: center;
+    padding: $main-padding / 6;
+    // line-height: 1.5rem;
+    font-weight: bold;
+    @media (orientation: landscape) {
+      padding: $main-padding / 6;
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    // padding-bottom: $main-padding;
+    padding: $main-padding 0 $main-padding / 2;
+
+    @media (orientation: landscape) {
+      // padding-bottom: $main-padding;
+
+      padding: $main-padding 0;
+      padding: $main-padding 0 $main-padding / 2;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-items: flex-end;
+  }
+
+  &__box {
+    width: 30%;
+    transition: width 0.4s ease-in-out;
+    color: $color-bright;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: $color-background;
+    border: 3px double $color-background-dark;
+  }
+
+  &__input {
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 1rem;
+    width: 100%;
+    background: $color-background;
+    border: 0;
+    padding: 1rem $main-padding / 2;
+  }
+
+  &__button {
+    color: $color-regular;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: $color-bright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  &__box:hover {
+    width: 60%;
+    max-width: 800px;
+  }
+}

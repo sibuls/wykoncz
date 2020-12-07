@@ -3,13 +3,14 @@
 .description {
   color: $color-font;
   font-family: $font-hand;
+
   position: absolute;
   //   width: 85px;
   text-align: center;
 
-  &--fitter {
+  &--carpenter {
     top: 5%;
-    right: 5%;
+    right: 18%;
   }
   &--plasterer {
     top: 18%;
@@ -19,16 +20,40 @@
     top: 8%;
     left: 30%;
   }
-  &--carpenter {
+  &--electrician {
     bottom: 10%;
     left: 10%;
   }
-  &--electrician {
+  &--others {
     bottom: 5%;
     right: 5%;
   }
   &--tiler {
     bottom: 2%;
     left: 40%;
+  }
+  &-active {
+    // font-size: 1rem;
+    // color: white;
+    text-decoration: underline;
+    animation: 3s infinite linear descriptionColors;
+  }
+
+  @keyframes descriptionColors {
+    0% {
+      // color: $color-font;
+    }
+    25% {
+      // color: $color-background-dark;
+    }
+    50% {
+      // color: $color-background-dark;
+    }
+    75% {
+      // color: $color-background-dark;
+    }
+    100% {
+      // color: $color-font;
+    }
   }
 }

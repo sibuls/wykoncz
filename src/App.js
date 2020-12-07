@@ -1,27 +1,33 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Footer from './components/footer/Footer';
-import Menu from './components/menu/Menu';
-import SearchPage from './components/search/SearchPage';
+import Menu from './components/pages/Pages';
 import contractors from './data/contractors.js';
 import professions from './data/professions.js';
 import Burger from './components/burger/Burger';
 import House from './components/house/House';
 import Header from './components/header/Header';
+import Pages from './components/pages/Pages';
 import ContractorsList from './components/contractors/ContractorsList';
 import './sass/style.scss';
+import { AppContext, defaultObject } from './AppContext';
+import UserInfo from './UserInfo';
+import Button from './Button';
 
-class App extends Component {
+class App extends PureComponent {
   state = {
-    isBurgerActive: true,
+    isUserLogged: defaultObject.isUserLogged,
+
+    isBurgerActive: false,
     professions: [],
     profession: '',
     descriptionPl: '',
     // dotTint: '',
     pprofession: '',
     contractors: [],
+    burgerChoice: '',
   };
 
-  changeProfession = (en, pl) => {
+  changeProfession = (en, pl, burgerChoice) => {
     const profession = en;
     const descriptionPl = pl;
 
@@ -30,6 +36,7 @@ class App extends Component {
       pprofession: prevstate.profession,
       descriptionPl,
       isMenuActive: true,
+      burgerChoice,
     }));
   };
 
@@ -49,10 +56,22 @@ class App extends Component {
 
   burgerChange = (id) => {
     this.setState({ isBurgerActive: !this.state.isBurgerActive });
-    console.log('burger has been clicked');
+    // console.log('burger has been clicked');
   };
 
+  burgerChoice = (burgerChoice) => {
+    this.setState({
+      burgerChoice,
+    });
+  };
+
+  handleToggleStateIsLogged = () =>
+    this.setState((prevState) => ({
+      isUserLogged: !prevState.isUserLogged,
+    }));
+
   render() {
+    console.log(this.state.profession + ' ---- app this state prof');
     return (
       <div className='app'>
         <Header />
@@ -64,24 +83,33 @@ class App extends Component {
             // changeTint={this.changeTint}
             // dotTint={this.state.dotTint}
           />
-          {this.state.profession === '' ? (
-            <SearchPage />
-          ) : (
-            <Menu
-              professions={this.state.professions}
-              profession={this.state.profession}
-              // pprofession={this.state.pprofession}
-              descriptionPl={this.state.descriptionPl}
-              contractors={this.state.contractors}
-            />
-          )}
+
+          <Pages
+            professions={this.state.professions}
+            profession={this.state.profession}
+            // pprofession={this.state.pprofession}
+            descriptionPl={this.state.descriptionPl}
+            contractors={this.state.contractors}
+            burgerChoice={this.state.burgerChoice}
+          />
           <ContractorsList />
         </div>
         <Burger
           isBurgerActive={this.state.isBurgerActive}
           burgerChange={this.burgerChange}
+          changeProfession={this.changeProfession}
+          burgerChoice={this.burgerChoice}
         />
-        <Footer />
+        <Footer />{' '}
+        <AppContext.Provider
+          value={{
+            isUserLogged: this.state.isUserLogged,
+            toggleLoggedState: this.handleToggleStateIsLogged,
+          }}
+        >
+          <UserInfo />
+          <Button />
+        </AppContext.Provider>
       </div>
     );
   }

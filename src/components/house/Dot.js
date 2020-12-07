@@ -1,49 +1,23 @@
 import React from 'react';
-import DotTint from './DotTint';
 import Line from './Line';
 
-const Dot = (props) => {
-  // console.log(props.style);
-
-  // const checkTintName = () => {};
-  // console.log(props.id);
-
+const Dot = ({ changeProfession, descriptionEn, descriptionPl, id, style }) => {
   return (
     <React.Fragment>
       <div
-        key={`${props.id}dot`}
-        id={`${props.id}dot`}
-        className={props.style}
-        // onMouseOver={() => props.changeTint(props.descriptionPl)}
-        // onMouseOut={() => props.changeTint('')}
+        key={`${id}dot`}
+        id={`${id}dot`}
+        className={style}
         onClick={() =>
-          props.changeProfession(props.profession, props.descriptionPl)
+          changeProfession(descriptionEn, descriptionPl, 'menuList')
         }
       ></div>
-      {/* 
-      <DotTint
-        key={`${props.id}dottint`}
-        id={`${props.id}dottint`}
-        profession={props.profession}
-        dotTint={props.dotTint}
-        descriptionPl={props.descriptionPl}
-      /> */}
-
-      {/* {props.dotTint === props.descriptionPl ? (
-        <DotTint
-          key={`${props.id}dottint`}
-          id={`${props.id}dottint`}
-          profession={props.profession}
-          dotTint={props.dotTint}
-          descriptionPl={props.descriptionPl}
-        />
-      ) : null} */}
 
       <Line
-        key={`${props.id}line`}
-        id={`${props.id}line`}
-        profession={props.profession}
-        descriptionPl={props.descriptionPl}
+        key={`${id}line`}
+        id={`${id}line`}
+        descriptionEn={descriptionEn}
+        descriptionPl={descriptionPl}
       />
     </React.Fragment>
   );
