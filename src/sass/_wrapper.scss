@@ -3,7 +3,7 @@
 
   display: grid;
   position: relative;
-  // border: 2px dotted blue;
+  // border: 3px dotted rgb(77, 205, 60);
   min-height: 100vh;
   // height: 100%;
   max-width: 1280px;
@@ -13,8 +13,10 @@
   grid-area: wrapper;
   grid-template:
     'house'
-    'menu'
-    'contractorslist';
+    'menupage'
+    'mainpage'
+    // 'contractorslist'
+;
 
   grid-template-rows: auto auto auto;
   grid-template-columns: auto;
@@ -23,11 +25,13 @@
   justify-items: center;
   margin: 0 auto;
 
-  @media only screen and (orientation: landscape) and (min-width: 1024px) {
+  @media only screen and (orientation: landscape) and (min-width: 1366px) {
     // background-color: #fff;
     grid-template:
-      'house menu'
-      'contractorslist contractorslist';
+      'house menupage'
+      'mainpage mainpage'
+      // 'contractorslist contractorslist'
+;
 
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
@@ -51,15 +55,3 @@
   //   // margin: 0 auto;
   // }
 }
-
-// .aa {
-//   grid-area: aa;
-//   background: orange;
-//   width: 100px;
-// }
-
-// .bb {
-//   grid-area: bb;
-//   background: green;
-//   // width: 1700px;
-// }

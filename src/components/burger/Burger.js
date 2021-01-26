@@ -27,28 +27,12 @@ class Burger extends React.Component {
         <nav role='navigation'>
           <div className='burger__menu-toggle'>
             <input type='checkbox' className='burger__input' />
-            {/* <input
-              type='checkbox'
-              className={
-                this.props.isBurgerActive
-                  ? 'burger__input burger__input--active'
-                  : 'burger__input'
-              }
-            /> */}
 
             <span className={this.state.burgerSpanName}></span>
             <span className={this.state.burgerSpanName}></span>
             <span className={this.state.burgerSpanName}></span>
 
-            <ul
-              // className={
-              //   this.props.isBurgerActive
-              //     ? 'burger__menu burger__menu--active'
-              //     : 'burger__menu'
-              // }
-              className='burger__menu'
-            >
-              <div className='burger__menu-cover'></div>
+            <ul className='burger__menu'>
               <a
                 href='#'
                 className='burger__link  burger__link--login  '
@@ -56,14 +40,6 @@ class Burger extends React.Component {
               >
                 <li className='burger__li  burger__li--login '>Moje konto</li>
               </a>
-              {/*               
-              <a
-                href='#'
-                className='burger__link'
-                onClick={() => this.props.burgerChoice('register')}
-              >
-                <li className='burger__li'>Rejestracja</li>
-              </a> */}
 
               <a
                 href='#'
@@ -87,8 +63,9 @@ class Burger extends React.Component {
                 className='burger__link'
                 onClick={() => this.props.burgerChoice('professions')}
               >
-                <li className='burger__li'>Działy budowlane </li>
+                <li className='burger__li'>Wizytówka</li>
               </a>
+              <div className='burger__triangle'></div>
             </ul>
           </div>
         </nav>

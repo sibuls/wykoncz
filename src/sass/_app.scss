@@ -2,21 +2,29 @@
   overflow: hidden;
   position: relative;
 
-  // border: 4px dotted green;
   min-height: 100vh;
   width: 100vw;
-  border: royalblue 2px dotted;
+  // border: royalblue 2px dotted;
+
+  // background: linear-gradient(
+  //     135deg,
+  //     rgba(255, 255, 255, 0) 30%,
+  //     rgba(255, 255, 255, 0) 50%,
+  //     rgba(#6d2223, 1) 50.1%,
+  //     rgba(#2d0c0d, 1) 85.1%,
+  //     rgba(#461314, 1) 100%
+  //   ),
+  //   $color-medium-light;
 
   background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(#bdb9ab, 1) 50.1%,
-      rgba(#787056, 1) 85.1%,
-      rgba(#d7cdae, 1) 100%
+      rgba(255, 255, 255, 0) 40%,
+      rgba(#6d2223, 1) 40.1%,
+      rgba(#2d0c0d, 1) 85.1%,
+      rgba(#461314, 1) 100%
     ),
-    rgba(#e6e0d0, 1);
-
+    $color-medium-light;
   display: grid;
   grid-template:
     'header'

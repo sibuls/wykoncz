@@ -1,0 +1,22 @@
+.wrapper {
+  display: grid;
+  position: relative;
+  min-height: 100vh;
+  max-width: 1280px;
+  width: 100vw;
+  grid-area: wrapper;
+  grid-template: "house" "menupage" "mainpage";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  align-content: flex-start;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+@media only screen and (orientation: landscape) and (min-width: 1366px) {
+  .wrapper {
+    grid-template: "house menupage" "mainpage mainpage";
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+  }
+}

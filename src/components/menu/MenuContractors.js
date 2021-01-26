@@ -1,7 +1,10 @@
 // import Contractor from './Contractor';
 import React, { Component } from 'react';
-import MenuContractor from './MenuContractor';
+
 import contractors from '../../data/contractors.js';
+import photo from '../../images/contractors/plumber-2.jpg';
+
+import BusinessCard from '../business_card/BusinessCard';
 
 const MenuContractors = (props) => {
   const profession = props.profession;
@@ -19,7 +22,13 @@ const MenuContractors = (props) => {
   const showContractor = filteredContractors.map((e) => {
     // console.log(e);
     return (
-      <MenuContractor key={e.id} id={e.id} name={e.name} image={e.image} />
+      <BusinessCard
+        key={e.id}
+        id={e.id}
+        name={e.name}
+        image={e.image}
+        descriptionPl={e.descriptionPl}
+      />
     );
   });
 
@@ -27,15 +36,7 @@ const MenuContractors = (props) => {
   // console.log(stan);
   // console.log(prof);
 
-  return (
-    <React.Fragment>
-      <div className='contractors'>
-        {showContractor}
-        {/* {showContractor} */}
-        {/* <Contractor contractors={this.state.contractors} /> */}
-      </div>
-    </React.Fragment>
-  );
+  return <div className='main-page__contractors-list'>{showContractor}</div>;
 };
 
 export default MenuContractors;

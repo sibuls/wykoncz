@@ -2,20 +2,19 @@ import React from 'react';
 
 const MenuSearch = () => {
   return (
-    <div className='menu-search'>
-      <h1 className='menu-search__title'>Wybierz dział klikając</h1>
-      <h1 className='menu-search__title'>w kropkę powyżej</h1>
-
-      <p className='menu-search__paragraph'>lub wyszukaj specjalizację</p>
-      <form action='' className='menu-search__form'>
-        <div className='menu-search__box'>
+    <div className='menu__content'>
+      <h1 className='menu__title'>Wybierz dział klikając</h1>
+      <h1 className='menu__title'>w kropkę powyżej</h1>{' '}
+      <p className='menu__paragraph'>lub wyszukaj specjalizację</p>
+      <form action='' className='menu__form'>
+        <div className='menu__box'>
           <input
             type='text'
-            className='menu-search__input'
+            className='menu__input'
             name=''
             placeholder='Wyszukaj ...'
           />
-          <button className='menu-search__button'>
+          <button className='menu__button'>
             <i className='fas fa-search search__ico'></i>
           </button>
         </div>

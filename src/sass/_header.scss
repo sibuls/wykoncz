@@ -2,33 +2,13 @@
   width: 100%;
   height: 38px;
   background-color: $color-dark;
+  background-color: $color-house-line;
+  background: $color-dark-linear;
   grid-area: header;
-  // clip: rect(auto, auto, auto, auto);
-
-  // border: blue dotted 1px;
-
-  &__cover {
-    display: none;
-
-    @media (max-resolution: 1dppx), (min-width: 1366px) {
-      display: block;
-      position: absolute;
-      z-index: 5;
-      background: $color-dark;
-      top: 0;
-      left: 50%;
-      width: 5%;
-      height: 58px;
-
-      transform: translate(-50%, 50%) rotate(45deg);
-    }
-  }
 
   &__wrapper {
     height: 100%;
     max-width: 1280px;
-    // border: red dotted 1px;
-    // align-items: center;
   }
   &__logo-container {
     display: flex;
@@ -36,7 +16,6 @@
     width: calc(100% - 50px);
     align-items: center;
     justify-content: left;
-    // border: orange dotted 1px;
   }
 
   &__logo {
@@ -44,27 +23,29 @@
   }
 
   &__brand {
-    // border: $color-dark dotted 1px;
-    color: $color-background;
-    // font-size: 1.5rem;
-    font-family: $font-commisioner;
-    font-family: $font-merr;
-    font-family: $font-ale;
-    font-family: $font-draper;
+    color: $color-bright;
+
+    font-family: 'Bowlby One SC', cursive;
     padding: 0 $main-padding / 2;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    // font-weight: bold;
-
-    // width: 70%;
-    // text-align: center;
+    font-size: 1.3rem;
   }
 
-  .brand {
-    text-shadow: 5px 5px 5px black;
-  }
+  // .brand {
+  //   text-shadow: 1px 1px $color-font;
+  // }
 
   @media only screen and (orientation: landscape) and (min-width: 1366px) {
     height: 58px;
+  }
+  @media only screen and (orientation: landscape) and (min-width: 1536px) {
+    height: 63px;
+  }
+  @media only screen and (orientation: landscape) and (min-width: 1680px) {
+    height: 75px;
+  }
+  @media only screen and (orientation: landscape) and (min-width: 1920px) {
+    height: 78px;
   }
 }

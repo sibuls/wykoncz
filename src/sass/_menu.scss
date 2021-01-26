@@ -1,16 +1,111 @@
 .menu {
-  // border: grey 1px dotted;
-  width: 100vw;
+  // padding: $main-padding * 2 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1.8rem;
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  grid-area: menu;
-
   align-content: center;
-  align-items: center;
+  border: white 1px dotted;
 
-  @media only screen and (orientation: landscape) and (min-width: 1024px) {
-    width: 50vw;
-    // height: 50vw;
+  &__content {
+    // border: orange 1px solid;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @media (orientation: landscape) {
+    }
+  }
+
+  &__title {
+    width: 100%;
+    padding: $main-padding / 6;
+
+    font-weight: bold;
+
+    @media (orientation: landscape) {
+      padding: $main-padding / 6;
+    }
+  }
+
+  &__paragraph {
+    width: 100%;
+    padding: $main-padding / 2;
+
+    @media (orientation: landscape) {
+      padding: $main-padding / 6;
+    }
+  }
+
+  &__login {
+    // width: 100%;
+
+    @media (orientation: landscape) {
+    }
+  }
+  &__form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: $main-padding / 6;
+    // justify-items: flex-end;
+
+    @media only screen and (orientation: landscape) {
+      // padding: $main-padding * 2 0;
+
+      line-height: 1.8rem;
+    }
+  }
+  &__box {
+    width: 45%;
+    transition: width 0.4s ease-in-out;
+    color: $color-bright;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: $color-background;
+    background-color: $color-dark;
+    background-color: $color-house-line;
+    border: 3px double $color-background-dark;
+    border: 3px double $color-font;
+    margin: $main-padding / 4;
+  }
+
+  &__box:hover {
+    width: 80%;
+    max-width: 800px;
+  }
+  &__input {
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 1rem;
+    width: 100%;
+    background: $color-background;
+    background: $color-dark;
+    background: $color-house-line;
+
+    border: 0;
+    padding: 1rem $main-padding / 2;
+    // background-color: red;
+  }
+
+  &__button {
+    color: $color-regular;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: $color-bright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
   }
 }

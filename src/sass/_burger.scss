@@ -3,8 +3,9 @@
   right: 0;
   top: 0;
 
-  @media (max-resolution: 1dppx), (min-width: 1366px) {
+  @media (max-resolution: 1dppx) and (min-width: 1366px) {
     position: absolute;
+    // grid-area: burger;
   }
 
   &__menu-toggle {
@@ -19,7 +20,7 @@
     -webkit-user-select: none;
     user-select: none;
 
-    @media (max-resolution: 1dppx), (min-width: 1366px) {
+    @media (max-resolution: 1dppx) and (min-width: 1366px) {
       right: 0; /* move whole menu to right side*/
     }
   }
@@ -31,7 +32,7 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: $color-background;
+    background: $color-bright;
     border-radius: 3px;
 
     z-index: 1;
@@ -41,7 +42,7 @@
     transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 
-    @media (max-resolution: 1dppx), (min-width: 1366px) {
+    @media (max-resolution: 1dppx) and (min-width: 1366px) {
       // opacity: 0;
       display: none;
     }
@@ -61,90 +62,81 @@
 
   &__menu {
     position: absolute;
-    padding: $main-padding * 2 0 $main-padding 0;
+    padding: $main-padding * 2 0 $main-padding * 1.5 0;
     right: 0;
     top: -4px;
     // height: 20vh;
-    // background-color: rgba($color: darken($color-house-line, 0%), $alpha: 0.95);
-
-    background-color: rgba($color-dark, 0.8);
 
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: top right;
     transform: translate(10%, 0%) rotate(175deg);
     transition: transform 0.8s ease-in-out;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 88%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 92%);
     opacity: 1;
+
+    background: $color-dark-linear;
+    // border: 1px solid #c9b494;
 
     &--active {
       transform: translate(10%, 0%) scale(0.3);
-      background-color: red;
+      background-color: $color-font;
     }
 
-    &-cover {
-      // display: none;
-
-      @media (max-resolution: 1dppx), (min-width: 1366px) {
-        display: block;
-        position: absolute;
-        z-index: 5;
-        background: green;
-        top: 100%;
-        left: 100%;
-        width: 100px;
-        height: 58px;
-        border: red 2px dotted;
-
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    @media (max-resolution: 1dppx), (min-width: 1366px) {
+    @media (max-resolution: 1dppx) and (min-width: 1366px) {
       transform: translate(0, 0) rotate(0deg) scale(1);
-
-      opacity: 1;
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-      background-color: rgba($color-dark, 1);
+      position: relative;
 
       display: flex;
       flex-wrap: wrap;
-      padding: $main-padding $main-padding * 3;
+      // margin-top: 38px; /* height of header  */
+      padding: 0 $main-padding * 3;
 
-      align-items: center;
-      align-content: center;
+      // align-items: center;
+      // align-content: center;
       width: 50vw;
       height: 30vh;
       justify-content: space-between;
-      // text-align: center;
-      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%, 0% 80%);
+
+      background: rgba($color: #000000, $alpha: 0);
+      clip-path: none;
+      height: 30vh;
+      // border: 2px solid rgb(136, 71, 71);
     }
   }
 
-  // &__menu :nth-child(2) {
-  //   // order: 5;
-  // }
-  // &__menu :nth-child(3) {
-  //   // order: 3;
-  // }
-  // &__menu :nth-child(4) {
-  //   // order: 2;
-  // }
-  // &__menu :nth-child(5) {
-  //   // order: 1;
-  // }
+  &__triangle {
+    position: absolute;
+    left: -2%;
+    bottom: 0;
+    width: 14%;
+    height: 8%;
+    transform: rotate(10deg);
+
+    background: linear-gradient(
+        35deg,
+        rgba(#c9b494, 1) 0%,
+        rgba(#dfd6c8, 1) 45.1%,
+        rgba(#8c6548, 1) 50.1%,
+        rgba(#c9b494, 1) 70%,
+        rgba(#c9b494, 1) 100%
+      ),
+      rgba(#e6e0d0, 1);
+
+    box-shadow: -1px 2px 4px 1px rgba(#968c74, 1);
+
+    @media (max-resolution: 1dppx) and (min-width: 1366px) {
+      display: none;
+    }
+  }
 
   &__link {
     display: flex;
     text-decoration: none;
-    // color: darken($color-background-dark, 30%);
-    color: $color-font;
-    color: $color-background;
-    color: $color-background-dark;
+
     transition: color 0.3s ease;
 
     padding: $main-padding / 2 $main-padding;
-    // padding-left: $main-padding / 4;
 
     font-weight: 600;
     letter-spacing: 0.1rem;
@@ -152,8 +144,12 @@
     align-content: center;
     align-items: center;
     border-radius: 0.4rem;
-    // border: 1px solid $color-background;
-    // border: green dotted 2px;
+
+    color: $color-font;
+    // color: $color-dark;
+    border: 1px solid $color-bright;
+    margin: $main-padding / 2;
+    background: $color-medium-light;
 
     &__link:hover {
       color: darken($color-dark, 70%);
@@ -161,36 +157,52 @@
     }
 
     @media only screen and (orientation: landscape) and (min-width: 1366px) {
-      width: 25%;
+      color: #290001b8;
+      color: $color-bright;
+
+      width: 27%;
       height: 30%;
       padding: 0;
-      margin: $main-padding 0;
-      border: 1px solid $color-background;
+      margin: 0;
+
+      background-color: $color-dark;
+      background-color: $color-house-line;
+
+      -moz-box-shadow: inset 0 0 2px rgb(6, 6, 6);
+      -webkit-box-shadow: inset 0 0 2px rgb(6, 6, 6);
+      box-shadow: inset 0 0 2px rgb(6, 6, 6);
+      transition: 0.2s;
 
       &:hover {
-        background: $color-background;
-        color: $color-dark;
-        // font-size: 0.75rem;
-        // transform: scale(1.1);
-        // transform: scale(1.1);
-
-        // border: double 3px $color-dark;
+        // color: $color-bright;
+        background-color: $color-dark;
+        transform: scale(1.1);
       }
       &--login {
         width: 40%;
+        height: 20%;
         margin-left: 60%;
-        // padding-left: 62%;
+
         font-size: 0.9rem;
-        background: $color-background;
-        color: $color-dark;
-        border: 5px solid $color-dark;
+        box-shadow: inset 0 0 0px rgb(6, 6, 6);
+
+        border: 1px solid $color-background-dark;
+
         border-radius: 0.6rem;
 
-        &:hover {
-          transform: scale(1.05);
+        background-color: #e6e0d0;
+        color: #290001b8;
+        border: 2px solid #593636af;
+        transition: 0.2s;
 
-          // border: double 3px $color-dark;
-          border: 5px double $color-dark;
+        &:hover {
+          // background-color: $color-dark;
+          background-color: #e6e0d0;
+
+          // color: $color-bright;
+          width: 45%;
+          margin-left: 55%;
+          // transform: scale(1.2);
         }
       }
     }
@@ -198,7 +210,7 @@
 
   &__li {
     line-height: 1.5rem;
-    // border: yellow 1px dotted;
+
     cursor: pointer;
 
     @media only screen and (orientation: landscape) and (min-width: 1366px) {
@@ -206,12 +218,11 @@
 
       // padding: $main-padding $main-padding;
       text-align: center;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       line-height: 1.2rem;
 
       width: 100%;
-
-      // border: double 3px $color-dark;
+      padding: 0 $main-padding / 2;
 
       &--login {
         // border: 1px solid $color-background;
@@ -226,7 +237,7 @@
       position: relative;
 
       &:hover > .burger__search-ico {
-        color: $color-dark;
+        // color: $color-dark;
       }
     }
   }
@@ -261,7 +272,7 @@
   &__input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: $color-background;
+    background: $color-bright;
   }
 
   &__input:checked ~ span:nth-last-child(3) {
@@ -269,9 +280,6 @@
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-  /*
-       * Ohyeah and the last one should go the other direction
-       */
   &__input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
@@ -281,7 +289,7 @@
     font-size: 1.4rem;
     position: absolute;
     transform-origin: center center;
-    color: $color-background-dark;
+    color: $color-bright;
 
     animation: search 8s infinite alternate linear;
     margin-left: $main-padding * 3;

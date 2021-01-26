@@ -5,10 +5,11 @@
 }
 
 .input {
-  background-color: $color-background;
+  background-color: $color-dark;
+
   padding: $main-padding / 4;
   width: 45%;
-  border: 3px double $color-background-dark;
+  border: 3px double $color-font;
   border-radius: 0.5rem;
 }
 

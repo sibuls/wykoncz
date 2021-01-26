@@ -1,12 +1,13 @@
 import React from 'react';
 import MenuSearch from '../menu/MenuSearch';
-import MenuList from '../menu/MenuList';
+import MenuChoice from '../menu/MenuChoice';
 import Login from '../loginPage/login/Login';
 import Advertisments from '../advertisments/Advertisments';
 import Register from '../loginPage/register/Register';
 import LoginPage from '../loginPage/LoginPage';
+import MenuCreateOffer from '../menu/MenuCreateOffer';
 
-const Pages = (props) => {
+const MenuPage = (props) => {
   const burgerChoice = props.burgerChoice;
 
   const renderSwitch = (burgerChoice) => {
@@ -15,11 +16,10 @@ const Pages = (props) => {
         return <MenuSearch />;
       case 'menuList':
         return (
-          <MenuList
+          <MenuChoice
             contractors={props.contractors}
             professions={props.professions}
             profession={props.profession}
-            // pprofession={props.pprofession}
             descriptionPl={props.descriptionPl}
           />
         );
@@ -28,29 +28,17 @@ const Pages = (props) => {
       case 'register':
         return <LoginPage />;
       case 'advertisment':
-        return <Advertisments />;
+        return <MenuCreateOffer />;
       default:
         return <MenuSearch />;
     }
   };
 
   return (
-    <div className='menu'>
-      {/* {props.profession === '' || props.burgerChoice === 'search' ? (
-        <MenuSearch />
-      ) : (
-        <MenuList
-          contractors={props.contractors}
-          professions={props.professions}
-          profession={props.profession}
-          // pprofession={props.pprofession}
-          descriptionPl={props.descriptionPl}
-        />
-      )} */}
-
-      {renderSwitch(burgerChoice)}
+    <div className='menu__page'>
+      <div className='menu__wrapper'>{renderSwitch(burgerChoice)}</div>
     </div>
   );
 };
 
-export default Pages;
+export default MenuPage;

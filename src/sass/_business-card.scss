@@ -1,0 +1,93 @@
+.business-card {
+  position: relative;
+  width: 95%;
+  height: 40vw;
+
+  margin: $main-padding / 1.5 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+
+  border: 1px solid $color-font;
+
+  @media (max-resolution: 1dppx) and (min-width: 1366px) {
+    width: 75%;
+    height: 50vh;
+  }
+
+  &__wrapper {
+    background: linear-gradient(
+        170deg,
+        rgba(#cec4a8, 1) 0%,
+        rgba(#e6e0d0, 1) 20%,
+        rgba(#e9e2ca, 1) 40%,
+        rgba(#dfdac9, 1) 60%,
+        rgba(#ded1b4, 1) 80%,
+        rgba(#e6e0d0, 1) 100%
+      ),
+      rgba(#c9b494, 1);
+
+    width: 100%;
+    height: 100%;
+    // border: 1px rgb(46, 46, 7) dotted;
+  }
+
+  &__header {
+    background: $color-dark-linear;
+    width: 100%;
+    height: 20%;
+    display: flex;
+
+    margin-top: $main-padding / 2;
+
+    align-items: center;
+    // border: 1px red dotted;
+  }
+
+  &__body {
+    width: 100%;
+    height: 55%;
+    padding: $main-padding / 1.5;
+    line-height: 1.4rem;
+    // border: 1px rgb(43, 155, 121) dotted;
+    // margin-top: $main-padding / 4;
+
+    // overflow-y: scroll;
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+  &__more-info {
+    width: 100%;
+    height: 15%;
+
+    padding-right: $main-padding / 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // border: 1px rgb(38, 43, 79) dotted;
+
+    // line-height: 1.4rem;
+    // font-weight: bold;
+  }
+
+  &__name {
+    padding-left: $main-padding / 2;
+    color: $color-medium-light;
+    font-weight: bold;
+  }
+
+  &__image {
+    border: 3px $color-background-dark double;
+    width: 40px;
+    height: 40px;
+    // margin: $main-padding / 2;
+    border-radius: 50%;
+  }
+}

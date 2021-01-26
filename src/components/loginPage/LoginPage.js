@@ -5,10 +5,10 @@ import Register from './register/Register';
 class LoginPage extends PureComponent {
   render() {
     return (
-      <div>
-        {/* <Login /> */}
+      <React.Fragment>
+        {' '}
         <Register />
-      </div>
+      </React.Fragment>
     );
   }
 }

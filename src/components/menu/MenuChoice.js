@@ -1,17 +1,18 @@
 import React from 'react';
 
-const Register = () => {
+import Paper from '../paper/Paper';
+
+const MenuChoice = (props) => {
   return (
     <div className='menu__content'>
-      {' '}
-      <h1 className='menu__title'>Zaloguj się</h1>
+      <h1 className='menu__title'> {props.descriptionPl}</h1>
       <form action='' className='menu__form'>
         <div className='menu__box'>
           <input
             type='text'
             className='menu__input'
             name=''
-            placeholder='Wpisz login'
+            placeholder='Miasto'
           />
         </div>
         <div className='menu__box'>
@@ -19,7 +20,7 @@ const Register = () => {
             type='password'
             className='menu__input'
             name=''
-            placeholder='Wpisz hasło'
+            placeholder='Słowa kluczowe np: "malowanie"'
           />
         </div>
       </form>
@@ -27,4 +28,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default MenuChoice;

@@ -1,0 +1,21 @@
+.pages {
+  border: grey 2px dotted;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  grid-area: menu;
+  align-content: center;
+  align-items: center;
+}
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+  .pages {
+    width: 50vw;
+  }
+}
+@media only screen and (orientation: landscape) and (min-width: 1366px) {
+  .pages {
+    margin-top: 30vh;
+    border: 1px solid grey;
+  }
+}

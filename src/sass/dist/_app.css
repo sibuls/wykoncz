@@ -1,0 +1,28 @@
+.app {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  border: royalblue 2px dotted;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 50%, #6d2223 50.1%, #2d0c0d 85.1%, #461314 100%), #e6e0d0;
+  display: grid;
+  grid-template: "header" "wrapper" "footer";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  justify-content: center;
+  justify-items: center;
+}
+
+.white {
+  color: orange;
+  background-color: green;
+}
+
+.black {
+  color: blue;
+  background-color: red;
+}
