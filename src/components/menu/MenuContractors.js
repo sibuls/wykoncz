@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 import contractors from '../../data/contractors.js';
-import photo from '../../images/contractors/plumber-2.jpg';
 
 import BusinessCard from '../business_card/BusinessCard';
 
@@ -28,6 +27,7 @@ const MenuContractors = (props) => {
         name={e.name}
         image={e.image}
         descriptionPl={e.descriptionPl}
+        setContractor={props.setContractor}
       />
     );
   });

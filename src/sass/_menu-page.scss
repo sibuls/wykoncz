@@ -1,16 +1,50 @@
-.menu__page {
-  // border: rgb(144, 19, 155) 3px dotted;
-  // background: rgba(0, 0, 0, 0.399);
+.menu-page {
   width: 100vw;
-  height: 30vh;
+  height: 25%;
   display: flex;
   margin: 0 auto;
   justify-content: center;
 
+  align-items: flex-start;
+
+  // border: 3px rgb(22, 21, 105) dotted;
+
   grid-area: menupage;
 
-  align-content: center;
-  align-items: center;
+  &__wrapper {
+    width: 85%;
+    // min-height: 20vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    color: $color-bright;
+
+    background: $color-dark-linear;
+
+    border: 1px solid $color-bright;
+    border-radius: 0.4rem;
+
+    // overflow-y: scroll;
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+
+    // border: 2px rgb(38, 151, 51) dotted;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    // height: 100%;
+    // margin: $main-padding auto;
+    // border: 2px yellow dotted;
+
+    @media only screen and (orientation: landscape) and (min-width: 1366px) {
+      height: 80%;
+    }
+  }
 
   @media only screen and (orientation: landscape) and (min-width: 1024px) {
     margin: 0 auto;
@@ -20,31 +54,5 @@
   @media only screen and (orientation: landscape) and (min-width: 1366px) {
     margin-top: 20vh;
     // border: 1px solid grey;
-  }
-}
-
-.menu__wrapper {
-  width: 85%;
-  height: 80%;
-  color: $color-font;
-  background: $color-medium-light;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-
-  color: $color-medium-light;
-
-  background: $color-dark-linear;
-  // background: $color-house-line;
-  border: 1px solid $color-bright;
-  border-radius: 0.4rem;
-
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 }

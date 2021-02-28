@@ -1,19 +1,30 @@
-// $color-bright: rgb(152, 152, 152);
-$color-bright: #dbcbbd;
-$color-medium-light: #e6e0d0;
+// $color-bright: #e8e5dd;
+$color-bright: #f4f3f2;
+$color-main-wrapper: #e9e6dc;
 
 $color-light: #c87941;
 $color-regular: #87431d;
-$color-dark: #290001;
-// $color-dark: #412122;
-$color-dark: lighten(rgb(205, 195, 180), 0%);
-// $color-dark: rgba(41, 0, 1, 0.4);
+$color-dark: #3c0708;
+
+// $color-dark: lighten(rgb(205, 195, 180), 0%);
 $color-house-line: #6d2223;
 $color-font: lighten(#290001, 5%);
 
-$color-dark: rgb(87, 19, 13);
-$color-dark: #290001;
-$color-dark: #3c0708;
+// grey
+
+$color-dark-linear: linear-gradient(
+    40deg,
+    rgba(#545050, 1) 0%,
+    rgba(#434040, 1) 20.1%,
+    rgba(#352e2e, 1) 40.1%,
+    rgba(#484545, 1) 60%,
+    rgba(#413a3a, 1) 80%,
+    rgba(#3d3737, 1) 100%
+  ),
+  rgba(#382e2e, 1);
+
+// red
+
 $color-dark-linear: linear-gradient(
     40deg,
     rgba(#742d2e, 1) 0%,
@@ -25,32 +36,40 @@ $color-dark-linear: linear-gradient(
   ),
   rgba(#460506, 1);
 
-// $color-background: #dccdb8;
-// $color-background-dark: rgb(185, 170, 147);
+$color-dark-linear: linear-gradient(
+    40deg,
+    rgba(#4d2e2e, 1) 0%,
+    rgba(#553131, 1) 20.1%,
+    rgba(#552e2e, 1) 40.1%,
+    rgba(#5b3a3a, 1) 60%,
+    rgba(#5e3c3c, 1) 80%,
+    rgba(#633b3b, 1) 100%
+  ),
+  rgba(#382e2e, 1);
 
-$color-background: lighten(#dccdb8, 0%);
-$color-background: lighten(rgb(210, 196, 174), 0%);
+$color-dark-linear: linear-gradient(
+    130deg,
+    rgba(darken(#671f20, 3%), 1) 0%,
+    rgba(darken(#5e1a1c, 3%), 1) 30.1%,
+    rgba(darken(#591718, 3%), 1) 60%,
+    rgba(darken(#591819, 3%), 1) 100%
+  ),
+  rgba(#460506, 1);
+
+// $color-dark-linear: rgba(0, 0, 0, 0.064);
+
 $color-background: rgba(41, 0, 1, 0.6);
 $color-background-dark: lighten(rgb(185, 170, 147), 0%);
 $color-background-dark: #faf4ea;
 $color-background-dark: #755c30;
 
-// $color-background-dark: linear-gradient(
-//     135deg,
-//     rgba(#bdb9ab, 1) 1%,
-//     rgba(#787056, 1) 10%,
-//     rgba(#d7cdae, 1) 30%,
-//     rgba(#e6e0d0, 1) 50%,
-//     rgba(#a7a18c, 1) 80%,
-//     rgba(#bfb69b, 1) 100%
-//   ),
-//   rgb(97, 68, 36);
-
 // color of paper
 $color-paper: #e9e4c9;
-$color-paper: rgba(#e6e0d0, 1);
 
-// $xs-font-size: 12px;
+$color-paper: #e6e3d4e7;
+
+// $color-paper: rgba(#e6e0d0, 1);
+
 $xs-font-size: 12px;
 $sm-font-size: 16px;
 $md-font-size: 18px;
@@ -63,6 +82,11 @@ $font-hand: 'Nothing You Could Do', cursive;
 $font-merr: 'Merriweather', serif;
 $font-ale: 'Alegreya', serif;
 $font-draper: 'Draper', sans-serif;
+$font-lato: 'Lato', sans-serif;
+
+$font-pt: 'PT Sans', sans-serif;
+$font-ubuntu: 'Ubuntu', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
 
 $main-padding: 20px;
 $main-margin-responsive: 20px;

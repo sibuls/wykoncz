@@ -3,13 +3,7 @@
   right: 0;
   top: 0;
 
-  @media (max-resolution: 1dppx) and (min-width: 1366px) {
-    position: absolute;
-    // grid-area: burger;
-  }
-
   &__menu-toggle {
-    // border: 2px red dotted;
     display: block;
     position: absolute;
     // transform: translate(0%, 0%);
@@ -62,21 +56,63 @@
 
   &__menu {
     position: absolute;
-    padding: $main-padding * 2 0 $main-padding * 1.5 0;
+    // padding: $main-padding * 2;
     right: 0;
     top: -4px;
     // height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: flex-end;
+    // align-content: flex-end;
+
+    // new
+    top: -10px;
 
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: top right;
     transform: translate(10%, 0%) rotate(175deg);
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 92%);
-    opacity: 1;
+    // opacity: 1;
 
-    background: $color-dark-linear;
+    // background: $color-dark-linear;
     // border: 1px solid #c9b494;
+
+    // new
+    // padding: $main-padding * 4 $main-padding * 1.2;
+    height: 100vh;
+    width: 80vw;
+    clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 8%);
+
+    border-left: 1px solid #ac9889;
+    border-top: 2px solid #ac9889;
+    background: rgb(223, 223, 223);
+    background: #f4f3f2;
+    background-image: url(../images/carpenter.png);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right 50% top 15%;
+
+    &-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      padding: 0 $main-padding * 2;
+
+      background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0) 40%,
+          rgba(#6d2223, 1) 40.1%,
+          rgba(#2d0c0d, 1) 85.1%,
+          rgba(#461314, 1) 100%
+        ),
+        transparent;
+    }
 
     &--active {
       transform: translate(10%, 0%) scale(0.3);
@@ -101,29 +137,29 @@
       background: rgba($color: #000000, $alpha: 0);
       clip-path: none;
       height: 30vh;
-      // border: 2px solid rgb(136, 71, 71);
+      border: none;
     }
   }
 
   &__triangle {
     position: absolute;
     left: -2%;
-    bottom: 0;
+    top: 0;
     width: 14%;
     height: 8%;
-    transform: rotate(10deg);
+    transform: rotate(-8deg);
 
     background: linear-gradient(
-        35deg,
-        rgba(#c9b494, 1) 0%,
-        rgba(#dfd6c8, 1) 45.1%,
-        rgba(#8c6548, 1) 50.1%,
-        rgba(#c9b494, 1) 70%,
-        rgba(#c9b494, 1) 100%
+        125deg,
+        rgba(#ebe9e7, 1) 0%,
+        rgba(#e8e5e1, 1) 45.1%,
+        #481509 50.1%,
+        rgba(#e8e7e5, 1) 70%,
+        rgba(#e4e3e1, 1) 100%
       ),
       rgba(#e6e0d0, 1);
 
-    box-shadow: -1px 2px 4px 1px rgba(#968c74, 1);
+    box-shadow: 0px -1px 3px 1px rgba(#cdc6b7, 1);
 
     @media (max-resolution: 1dppx) and (min-width: 1366px) {
       display: none;
@@ -146,10 +182,18 @@
     border-radius: 0.4rem;
 
     color: $color-font;
-    // color: $color-dark;
-    border: 1px solid $color-bright;
-    margin: $main-padding / 2;
-    background: $color-medium-light;
+    color: rgb(36, 35, 35);
+    // color: $color-bright;
+    width: 90%;
+    border: 1px rgb(29, 29, 29) solid;
+    // new
+    margin: $main-padding * 0.5 $main-padding;
+    box-shadow: inset 0px -1px 2px rgb(18, 1, 1);
+
+    background: linear-gradient(35deg, #e6e3d4e7 0%, #d8d4bde7 100%),
+      rgba(#e6e0d0, 1);
+    background: $color-bright;
+    // background: $color-dark-linear;
 
     &__link:hover {
       color: darken($color-dark, 70%);
@@ -165,8 +209,7 @@
       padding: 0;
       margin: 0;
 
-      background-color: $color-dark;
-      background-color: $color-house-line;
+      background: $color-house-line;
 
       -moz-box-shadow: inset 0 0 2px rgb(6, 6, 6);
       -webkit-box-shadow: inset 0 0 2px rgb(6, 6, 6);
@@ -213,6 +256,17 @@
 
     cursor: pointer;
 
+    //  new
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: bold;
+
+    font-family: $font-poppins;
+
+    &--offer {
+      padding-right: $main-padding * 2.5;
+    }
+
     @media only screen and (orientation: landscape) and (min-width: 1366px) {
       margin: $main-padding 0;
 
@@ -242,16 +296,22 @@
     }
   }
 
-  &__input:checked ~ &__menu {
-    // start values : transform: translate(10%, 0%) rotate(175deg);
+  // &__input:checked ~ &__menu {
+  //   transform: translate(10%, 0) rotate(5deg);
+  // }
 
-    transform: translate(10%, 0) rotate(5deg);
-  }
+  // &__input:not(:checked) ~ &__menu {
+  //   transform: translate(10%, 0) rotate(45deg) scale (0.4);
+  // }
 
-  &__input:not(:checked) ~ &__menu {
-    // start values : transform: translate(10%, 0%) rotate(175deg);
+  @media (max-width: 1000px) {
+    &__input:checked ~ &__menu {
+      transform: translate(10%, 0%) rotate(0deg);
+    }
 
-    transform: translate(10%, 0) rotate(45deg) scale (0.4);
+    &__input:not(:checked) ~ &__menu {
+      transform: translate(110%, 0%) rotate(0deg);
+    }
   }
 
   &__input {
@@ -273,6 +333,7 @@
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: $color-bright;
+    background: $color-font;
   }
 
   &__input:checked ~ span:nth-last-child(3) {
@@ -289,15 +350,23 @@
     font-size: 1.4rem;
     position: absolute;
     transform-origin: center center;
-    color: $color-bright;
 
-    animation: search 8s infinite alternate linear;
+    color: $color-font;
+    color: rgb(94, 93, 93);
+
+    animation: search 8s infinite alternate ease-in-out;
     margin-left: $main-padding * 3;
 
     @media only screen and (orientation: landscape) and (min-width: 1366px) {
       animation: search-wide 8s infinite alternate linear;
       font-size: 1rem;
+      color: $color-bright;
     }
+  }
+
+  @media (max-resolution: 1dppx) and (min-width: 1366px) {
+    position: absolute;
+    // grid-area: burger;
   }
 }
 

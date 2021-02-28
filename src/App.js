@@ -19,6 +19,8 @@ import {
   Switch,
 } from 'react-router-dom';
 import MainPage from './components/pages/MainPage';
+import UserPage from './components/user/User';
+import StartPage from './components/pages/StartPage';
 
 class App extends PureComponent {
   state = {
@@ -32,6 +34,7 @@ class App extends PureComponent {
     pprofession: '',
     contractors: [],
     burgerChoice: '',
+    contractor: '',
   };
 
   changeProfession = (en, pl, burgerChoice) => {
@@ -77,39 +80,57 @@ class App extends PureComponent {
       isUserLogged: !prevState.isUserLogged,
     }));
 
+  setContractor = (contractor) => {
+    this.setState({
+      contractor,
+    });
+  };
+
+  // setContractor = (idContractor) => console.log('setcsdfsdf');
+
   render() {
-    console.log(this.state.profession + ' ---- app this state prof');
+    console.log(this.state.contractor);
+    // console.log(this.state.profession + ' ---- app this state prof');
     return (
       <Router>
         <div className='app'>
           <Header />
-          <div id='wrapper' className='wrapper'>
-            <House
-              changeProfession={this.changeProfession}
-              profession={this.state.profession}
-              professions={this.state.professions}
-              // changeTint={this.changeTint}
-              // dotTint={this.state.dotTint}
-            />
+          {/*  */}
+          <Switch>
+            <Route exact path='/'>
+              <div id='wrapper' className='wrapper'>
+                <House
+                  changeProfession={this.changeProfession}
+                  profession={this.state.profession}
+                  professions={this.state.professions}
+                />{' '}
+                <div className='wrapper-box'>
+                  <MenuPage
+                    professions={this.state.professions}
+                    profession={this.state.profession}
+                    // pprofession={this.state.pprofession}
+                    descriptionPl={this.state.descriptionPl}
+                    contractors={this.state.contractors}
+                    burgerChoice={this.state.burgerChoice}
+                  />
+                  <MainPage
+                    professions={this.state.professions}
+                    profession={this.state.profession}
+                    // pprofession={this.state.pprofession}
+                    descriptionPl={this.state.descriptionPl}
+                    contractors={this.state.contractors}
+                    burgerChoice={this.state.burgerChoice}
+                    setContractor={this.setContractor}
+                  />
+                </div>
+              </div>
+            </Route>
 
-            <MenuPage
-              professions={this.state.professions}
-              profession={this.state.profession}
-              // pprofession={this.state.pprofession}
-              descriptionPl={this.state.descriptionPl}
-              contractors={this.state.contractors}
-              burgerChoice={this.state.burgerChoice}
-            />
-            {/* <ContractorsList /> */}
-            <MainPage
-              professions={this.state.professions}
-              profession={this.state.profession}
-              // pprofession={this.state.pprofession}
-              descriptionPl={this.state.descriptionPl}
-              contractors={this.state.contractors}
-              burgerChoice={this.state.burgerChoice}
-            />
-          </div>
+            <Route path='/:user'>
+              {' '}
+              <UserPage contractor={this.state.contractor} />
+            </Route>
+          </Switch>
           <Burger
             isBurgerActive={this.state.isBurgerActive}
             burgerChange={this.burgerChange}
@@ -123,8 +144,8 @@ class App extends PureComponent {
               toggleLoggedState: this.handleToggleStateIsLogged,
             }}
           >
-            <UserInfo />
-            <Button />
+            {/* <UserInfo /> */}
+            {/* <Button /> */}
           </AppContext.Provider>
         </div>
       </Router>

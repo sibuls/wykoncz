@@ -12,6 +12,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+  // background: #f4f3f2;
 
   &__logo {
     width: 30%;
@@ -53,10 +54,13 @@
 }
 
 .copyright {
-  // background-color: green;
+  background-color: $color-paper;
+  background: #f4f3f2;
   width: 100vw;
   height: 100%;
   text-align: center;
+  grid-area: copyright;
+  // color: $color-bright;
 
-  border-bottom: 8px solid $color-dark;
+  border-bottom: 4px solid $color-dark;
 }

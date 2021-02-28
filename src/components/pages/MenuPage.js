@@ -35,8 +35,8 @@ const MenuPage = (props) => {
   };
 
   return (
-    <div className='menu__page'>
-      <div className='menu__wrapper'>{renderSwitch(burgerChoice)}</div>
+    <div className='menu-page'>
+      <div className='menu-page__wrapper'>{renderSwitch(burgerChoice)}</div>
     </div>
   );
 };

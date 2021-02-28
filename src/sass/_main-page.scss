@@ -1,32 +1,25 @@
 .main-page {
   width: 100vw;
-  height: 90vh;
-  // border: rgb(26, 20, 150) 2px dotted;
-  grid-area: mainpage;
 
+  height: 70%;
   display: flex;
-  margin: $main-padding / 4 auto;
-  justify-content: center;
 
-  align-content: center;
-  align-items: center;
+  justify-content: center;
+  grid-area: mainpage;
 
   &__wrapper {
     width: 85%;
     height: 100%;
     color: $color-font;
-    background: $color-medium-light;
+    background: $color-bright;
+
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    justify-items: center;
-
-    // color: $color-medium-light;
-
-    background: $color-dark-linear;
-    // background: $color-house-line;
     border: 1px solid $color-bright;
+
     border-radius: 0.4rem;
+    border: darken($color-bright, 15%) 1px solid;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;

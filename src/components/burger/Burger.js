@@ -33,38 +33,40 @@ class Burger extends React.Component {
             <span className={this.state.burgerSpanName}></span>
 
             <ul className='burger__menu'>
-              <a
-                href='#'
-                className='burger__link  burger__link--login  '
-                onClick={() => this.props.burgerChoice('login')}
-              >
-                <li className='burger__li  burger__li--login '>Moje konto</li>
-              </a>
+              <div className='burger__menu-wrapper'>
+                <a
+                  href='#'
+                  className='burger__link  burger__link--login  '
+                  onClick={() => this.props.burgerChoice('login')}
+                >
+                  <li className='burger__li  burger__li--login '>Moje konto</li>
+                </a>
 
-              <a
-                href='#'
-                className='burger__link'
-                // onClick={() => this.props.changeProfession('')}
-                onClick={() => this.props.burgerChoice('search')}
-              >
-                <li className='burger__li burger__li--search'>
-                  Szukaj
-                  <i className='fas fa-search burger__search-ico '></i>{' '}
-                  wykonawcy
-                </li>
-              </a>
-              <a
-                className='burger__link'
-                onClick={() => this.props.burgerChoice('advertisment')}
-              >
-                <li className='burger__li'>Złóż ofertę</li>
-              </a>
-              <a
-                className='burger__link'
-                onClick={() => this.props.burgerChoice('professions')}
-              >
-                <li className='burger__li'>Wizytówka</li>
-              </a>
+                <a
+                  href='#'
+                  className='burger__link'
+                  // onClick={() => this.props.changeProfession('')}
+                  onClick={() => this.props.burgerChoice('search')}
+                >
+                  <li className='burger__li burger__li--search'>
+                    Szukaj
+                    <i className='fas fa-search burger__search-ico '></i>{' '}
+                    wykonawcy
+                  </li>
+                </a>
+                <a
+                  className='burger__link'
+                  onClick={() => this.props.burgerChoice('advertisment')}
+                >
+                  <li className='burger__li burger__li--offer'>Złóż ofertę</li>
+                </a>
+                <a
+                  className='burger__link'
+                  onClick={() => this.props.burgerChoice('professions')}
+                >
+                  <li className='burger__li'>Wizytówka</li>
+                </a>
+              </div>
               <div className='burger__triangle'></div>
             </ul>
           </div>

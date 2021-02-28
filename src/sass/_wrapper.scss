@@ -5,7 +5,7 @@
   position: relative;
   // border: 3px dotted rgb(77, 205, 60);
   min-height: 100vh;
-  // height: 100%;
+
   max-width: 1280px;
 
   width: 100vw;
@@ -13,23 +13,59 @@
   grid-area: wrapper;
   grid-template:
     'house'
-    'menupage'
-    'mainpage'
+    'wrapperbox'
     // 'contractorslist'
 ;
 
-  grid-template-rows: auto auto auto;
   grid-template-columns: auto;
+  grid-template-rows: auto auto;
+
   align-content: flex-start;
+  align-items: flex-start;
   justify-content: center;
   justify-items: center;
   margin: 0 auto;
+
+  &-box {
+    height: 130vh;
+    grid-area: wrapperbox;
+    // border: red dotted 3px;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $main-padding;
+
+    // @media only screen and (orientation: landscape) and (min-width: 1366px) {
+    //   display: grid;
+    //   position: relative;
+
+    //   min-height: 100vh;
+
+    //   max-width: 1280px;
+
+    //   width: 100vw;
+
+    //   grid-area: wrapper;
+
+    //   align-content: flex-start;
+    //   align-items: flex-start;
+    //   justify-content: center;
+    //   justify-items: center;
+
+    //   grid-template:
+    //     'house menupage'
+    //     'mainpage mainpage';
+
+    //   grid-template-rows: auto auto;
+    //   grid-template-columns: auto auto;
+    // }
+  }
 
   @media only screen and (orientation: landscape) and (min-width: 1366px) {
     // background-color: #fff;
     grid-template:
       'house menupage'
-      'mainpage mainpage'
+      'wrapperbox wrapperbox'
       // 'contractorslist contractorslist'
 ;
 

@@ -11,6 +11,7 @@ const MainPage = (props) => {
         <MenuContractors
           descriptionPl={props.descriptionPl}
           contractors={props.contractors}
+          setContractor={props.setContractor}
           professions={props.professions}
           profession={props.profession}
           // pprofession={props.pprofession}
