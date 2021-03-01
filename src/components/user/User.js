@@ -39,7 +39,7 @@ const User = (props) => {
         <div className='user__photo'>
           <img
             className='user__photo-img'
-            src={images[Math.floor(Math.random() * 3)]}
+            src={images[Math.floor(Math.random() * 8)]}
             alt='user photo'
           />
         </div>
@@ -59,7 +59,7 @@ const User = (props) => {
         <div className='user__photo'>
           <img
             className='user__photo-img'
-            src={images[Math.floor(Math.random() * 3)]}
+            src={images[Math.floor(Math.random() * 8)]}
             alt='user photo'
           />
         </div>
