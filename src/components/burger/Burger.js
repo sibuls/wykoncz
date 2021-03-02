@@ -66,8 +66,8 @@ class Burger extends React.Component {
                 >
                   <li className='burger__li'>Wizytówka</li>
                 </a>
+                <div className='burger__triangle'></div>
               </div>
-              <div className='burger__triangle'></div>
             </ul>
           </div>
         </nav>
