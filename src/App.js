@@ -13,6 +13,7 @@ import UserInfo from './UserInfo';
 import Button from './Button';
 import {
   BrowserRouter as Router,
+  HashRouter,
   Link,
   NavLink,
   Route,

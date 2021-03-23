@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Advertisments = () => {
-  return <div>Utworz ogloszenie</div>;
+  return <div>Utwórz ogłoszenie</div>;
 };
 
 export default Advertisments;

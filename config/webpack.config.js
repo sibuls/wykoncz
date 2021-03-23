@@ -1,20 +1,31 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// var server = new WebpackDevServer(compiler, { historyApiFallback: true });
 
 module.exports = {
   mode: 'development',
+
   entry: {
     main: './src/index.js',
   },
   output: {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, '../', 'build'),
+    publicPath: '/',
   },
   devServer: {
     open: true,
     contentBase: path.resolve(__dirname, '../', 'public'),
     port: 3030,
+
+    // hot: true,
+    // host: 'localhost',
+
+    compress: true,
+
+    https: false,
+    historyApiFallback: true,
   },
   module: {
     rules: [
